@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="19" filename="textures/display.dds" relativePath="true"/>
+    <File fileId="17" filename="textures/gasStation_diffuse.dds" relativePath="true"/>
+    <File fileId="18" filename="textures/pistol_diffuse.dds" relativePath="true"/>
+    <File fileId="6" filename="textures/einleger.png" relativePath="true"/>
+    <File fileId="10" filename="textures/fertilizerTank_diffuse.png" relativePath="true"/>
+    <File fileId="11" filename="textures/fertilizerTank_normal.png" relativePath="true"/>
+    <File fileId="12" filename="textures/fertilizerTank_specular.png" relativePath="true"/>
+    <File fileId="1" filename="textures/pfosten_slr.png" relativePath="true"/>
+    <File fileId="2" filename="textures/pfosten_slr_normal.png" relativePath="true"/>
+    <File fileId="3" filename="textures/schutzecke.png" relativePath="true"/>
+    <File fileId="5" filename="textures/slr_traeger.png" relativePath="true"/>
+    <File fileId="4" filename="textures/slr_traeger_normal.png" relativePath="true"/>
+    <File fileId="8" filename="textures/barrel01_diffuse.png" relativePath="true"/>
+    <File fileId="14" filename="textures/carLift_diffuse.png" relativePath="true"/>
+    <File fileId="21" filename="textures/extinguisher_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="textures/gasBottle_diffuse.png" relativePath="true"/>
+    <File fileId="13" filename="textures/gasolineCan_diffuse.png" relativePath="true"/>
+    <File fileId="7" filename="textures/generator_diffuse.png" relativePath="true"/>
+    <File fileId="16" filename="textures/sackBarrow_diffuse.png" relativePath="true"/>
+    <File fileId="15" filename="textures/toolCabinet_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="___Default" materialId="15" ambientColor="1 1 1">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="sackBarrow_diffuse" materialId="106" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Texture fileId="16"/>
+    </Material>
+    <Material name="gasStation" materialId="27" ambientColor="1 1 1">
+      <Texture fileId="17"/>
+    </Material>
+    <Material name="display" materialId="130" ambientColor="1 1 1">
+      <Texture fileId="19"/>
+    </Material>
+    <Material name="lambert2" materialId="122" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="lambert3" materialId="256" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="13"/>
+    </Material>
+    <Material name="lambert5" materialId="191" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="lambert4" materialId="174" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+    </Material>
+    <Material name="fertilizerTank_mat" materialId="181" ambientColor="1 1 1" cosPower="125" specularColor="1 1 1">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="lambert2" materialId="167" ambientColor="1 1 1">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="lambert2" materialId="319" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="lambert2" materialId="333" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+    <Material name="pistol" materialId="357" ambientColor="1 1 1">
+      <Texture fileId="18"/>
+    </Material>
+    <Material name="extinguisher_diffuse" materialId="342" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Texture fileId="21"/>
+    </Material>
+    <Material name="lambert1" materialId="301" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="gasBottleMat" materialId="305" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="___Default1" materialId="282" ambientColor="1 1 1">
+      <Texture fileId="15"/>
+    </Material>
+    <Material name="lambert2" materialId="396" ambientColor="1 1 1">
+      <Texture fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="garageStuff.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="garageStuff" translation="-7.60845 0 0" rotation="-2.79817e-21 1.761 7.21725e-14" static="true" clipDistance="100" nodeId="7452" materialIds="333,174" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="1" name="doppelsparn_h250cm" translation="0 2.5 0" static="true" clipDistance="100" nodeId="7453" materialIds="333,174" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="abschluss_doppelsparn" translation="0 2.5 0" scale="1.8345 1 1" static="true" clipDistance="100" nodeId="7454" materialIds="174" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="3" name="fuss_doppelsparn" static="true" clipDistance="100" nodeId="7455" materialIds="174" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.42241 0.165 -0.532" static="true" clipDistance="100" nodeId="7456" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.42241 1.5644 -0.532" static="true" clipDistance="100" nodeId="7457" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.42241 2.965 -0.532" static="true" clipDistance="100" nodeId="7458" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.42241 4.365 -0.532" static="true" clipDistance="100" nodeId="7459" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.42241 4.365 0.532" rotation="0 180 0" static="true" clipDistance="100" nodeId="7460" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.422 2.965 0.532" rotation="0 180 0" static="true" clipDistance="100" nodeId="7461" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.422 1.565 0.532" rotation="0 180 0" static="true" clipDistance="100" nodeId="7462" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="traeger_270cm" translation="-1.422 0.165 0.532" rotation="0 180 0" static="true" clipDistance="100" nodeId="7463" materialIds="191" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="1" name="doppelsparn_h250cm" translation="-2.846 0 0" static="true" clipDistance="100" nodeId="7464" materialIds="333,174" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="1" name="doppelsparn_h250cm" translation="0 2.5 0" static="true" clipDistance="100" nodeId="7465" materialIds="333,174" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="2" name="abschluss_doppelsparn" translation="0 2.5 0" scale="1.8345 1 1" static="true" clipDistance="100" nodeId="7466" materialIds="174" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="3" name="fuss_doppelsparn" static="true" clipDistance="100" nodeId="7467" materialIds="174" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="5" name="einleger270" translation="-1.422 0.219 0" static="true" clipDistance="100" nodeId="7468" materialIds="396" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="einleger270" translation="-1.422 1.617 0" static="true" clipDistance="100" nodeId="7469" materialIds="396" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="einleger270" translation="-1.422 3.01613 0" static="true" clipDistance="100" nodeId="7470" materialIds="396" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="einleger270" translation="-1.422 4.41625 0" static="true" clipDistance="100" nodeId="7471" materialIds="396" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="Warnecke" translation="-2.98327 0.01 0.635241" rotation="0 -90 0" static="true" clipDistance="100" nodeId="34445" materialIds="122" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="Warnecke" translation="0.137086 0.01 0.635241" static="true" clipDistance="100" nodeId="34446" materialIds="122" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="generator" translation="-2.44165 0.227509 0.0365962" rotation="-6.54255e-15 0.478188 1.01835e-13" static="true" nodeId="34447" materialIds="319" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="barrel01" translation="-0.393703 0.238224 -0.213008" static="true" collision="false" nodeId="34448" materialIds="167" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="barrel01" translation="-1.04175 0.238224 -0.209183" rotation="6.11328e-14 -20.9489 -1.16932e-12" static="true" collision="false" nodeId="34449" materialIds="167" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="9" name="gasBottle" translation="-0.33749 0.229957 0.318141" rotation="-9.62274e-07 -54.5112 7.90459e-07" static="true" nodeId="34450" materialIds="305" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="9" name="gasBottle" translation="-0.731812 0.229992 0.25411" rotation="-0.0406864 5.90332 -0.000822796" static="true" nodeId="34451" materialIds="305" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="10" name="fertilizerTank_vis" translation="-2.2431 1.62814 -2.23932e-09" rotation="0 -90 0" scale="0.75 0.8 0.75" clipDistance="300" nodeId="34452" materialIds="181" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="11" name="gasolineCan" translation="-1.54803 0.227823 0.0179403" rotation="-0.000179725 -56.6399 -2.47403e-07" static="true" nodeId="34453" materialIds="256" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="11" name="gasolineCan" translation="-1.76381 0.227824 0.258877" rotation="-0.000179725 146.64 -2.47403e-07" static="true" nodeId="34454" materialIds="256" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="12" name="CarLift" translation="-4.76678 -0.0797729 0.92128" rotation="-5.25441e-14 90 1.64983e-12" static="true" collision="false" nodeId="34455" materialIds="15" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="13" name="ToolCabinet" translation="-2.89725 -0.0192108 1.8067" rotation="-180 -88.103 180" static="true" nodeId="34456" materialIds="282" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="14" name="sackBarrow" translation="0.190048 -0.0541534 0.907074" static="true" nodeId="34457" materialIds="106" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="15" name="gasStation" translation="-3.67094 -0.0192032 4.75932" rotation="-0 -90 0" scale="1 1 0.8" static="true" nodeId="34458" materialIds="27" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="16" name="pistol" translation="0 0 -0.0290838" nodeId="34459" materialIds="357" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="17" name="display" translation="0 1.71956 2.8" scale="1 0.5 1" nodeId="34460" materialIds="130" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="18" name="stripe" translation="-0.00258701 1.55894 2.643" scale="1 0.3 1" nodeId="34461" materialIds="27" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="19" name="gasStationTrigger" translation="0.98762 -1.19013 -0.343532" scale="4 5 4" static="true" trigger="true" collisionMask="14680064" nodeId="34462" materialIds="301" nonRenderable="true"/>
+      </Shape>
+      <Shape shapeId="20" name="extinguisher" translation="0.0147683 1.40309 0.657835" rotation="-1.00179e-05 180 0" static="true" nodeId="34463" materialIds="342" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="34462">
+      <Attribute name="onCreate" type="scriptCallback" value="GasStation.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="textures/carLiftSmall_diffuse.png" relativePath="true"/>
+    <File fileId="11" filename="textures/carLiftSmall_normal.png" relativePath="true"/>
+    <File fileId="12" filename="textures/carLiftSmall_specular.png" relativePath="true"/>
+    <File fileId="2" filename="textures/compressor_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="textures/compressor_normal.png" relativePath="true"/>
+    <File fileId="4" filename="textures/compressor_specular.png" relativePath="true"/>
+    <File fileId="22" filename="textures/earmuffs_diffuse.png" relativePath="true"/>
+    <File fileId="23" filename="textures/earmuffs_normal.png" relativePath="true"/>
+    <File fileId="24" filename="textures/earmuffs_specular.png" relativePath="true"/>
+    <File fileId="13" filename="textures/extensionCord_diffuse.png" relativePath="true"/>
+    <File fileId="14" filename="textures/extensionCord_normal.png" relativePath="true"/>
+    <File fileId="15" filename="textures/extensionCord_specular.png" relativePath="true"/>
+    <File fileId="16" filename="textures/gasCanister_diffuse.png" relativePath="true"/>
+    <File fileId="17" filename="textures/gasCanister_normal.png" relativePath="true"/>
+    <File fileId="18" filename="textures/gasCanister_specular.png" relativePath="true"/>
+    <File fileId="19" filename="textures/grinder_diffuse.png" relativePath="true"/>
+    <File fileId="20" filename="textures/grinder_normal.png" relativePath="true"/>
+    <File fileId="21" filename="textures/grinder_specular.png" relativePath="true"/>
+    <File fileId="6" filename="textures/waterCanister_diffuse.png" relativePath="true"/>
+    <File fileId="7" filename="textures/waterCanister_normal.png" relativePath="true"/>
+    <File fileId="8" filename="textures/waterCanister_specular.png" relativePath="true"/>
+    <File fileId="25" filename="textures/weldingMask_diffuse.png" relativePath="true"/>
+    <File fileId="26" filename="textures/weldingMask_normal.png" relativePath="true"/>
+    <File fileId="27" filename="textures/weldingMask_specular.png" relativePath="true"/>
+    <File fileId="9" filename="textures/Benzinkanister_diffuse.dds" relativePath="true"/>
+    <File fileId="5" filename="textures/sparePartsCrate_Fendt_Diff.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="weldingMask_mat" materialId="454" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="25"/>
+      <Normalmap fileId="26"/>
+      <Glossmap fileId="27"/>
+    </Material>
+    <Material name="earmuffs_mat" materialId="447" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="22"/>
+      <Normalmap fileId="23"/>
+      <Glossmap fileId="24"/>
+    </Material>
+    <Material name="compressor_mat" materialId="535" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="material188" materialId="597" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="lambert1" materialId="591" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="carLiftSmall_mat" materialId="813" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="grinder_mat" materialId="792" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="19"/>
+      <Normalmap fileId="20"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="sparePartsCrate_mat" materialId="30" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="waterCanister_mat" materialId="122" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="gasCanister_mat" materialId="165" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="18"/>
+    </Material>
+    <Material name="extensionCords_mat" materialId="147" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bitsNbobs.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="BitsNBobs" translation="-98.3655 -741.285 133.858" rotation="0.000113052 49.4978 8.70509e-05" dynamic="true" clipDistance="77" nodeId="16057" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape shapeId="2" name="compressor_vis" clipDistance="77" nodeId="16058" materialIds="535" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="sparePartsCrate" translation="0.991818 -0.000564575 -0.499282" rotation="5.5768e-11 45.5082 5.5768e-10" static="true" clipDistance="80" nodeId="55236" materialIds="30" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="waterCanister" translation="-0.584443 0.00723529 -0.77552" rotation="180 -47.5167 -179.995" dynamic="true" clipDistance="77" nodeId="55237" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="5" name="waterCanister_vis" clipDistance="77" nodeId="55238" materialIds="122" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="6" name="gasolineCan" translation="-0.80896 -0.000564575 -1.38557" rotation="-4.91481e-06 86.9703 -4.90643e-06" static="true" density="0.9" clipDistance="80" nodeId="55239" materialIds="597" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="carLiftSmallOpen_vis" translation="0 0 -1.06765" clipDistance="50" nodeId="55240" materialIds="813" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="extensionCordLong" translation="1.26221 -0.000564575 -1.23196" rotation="0.0208172 0.000569467 0.00260419" dynamic="true" clipDistance="65" nodeId="55241" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="9" name="extensionCordLong_vis" clipDistance="150" nodeId="55242" materialIds="147" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="10" name="gasCanister" translation="1.97247 -0.000564575 -0.305649" rotation="-0.00229624 2.18929 0.000324671" dynamic="true" clipDistance="66" nodeId="55243" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="11" name="gasCanister_vis" clipDistance="150" nodeId="55244" materialIds="165" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="12" name="extensionCordReel" translation="-1.56799 -0.000564575 0.322609" rotation="-180 -0.471876 -180" dynamic="true" clipDistance="84" nodeId="55245" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="13" name="extensionCordReel_vis" clipDistance="150" nodeId="55246" materialIds="147" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="14" name="grinder" translation="2.14583 -0.000564575 -0.904678" rotation="-0.373057 79.9592 -0.000455776" dynamic="true" density="2" clipDistance="50" nodeId="55247" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="15" name="grinder_vis" clipDistance="50" nodeId="55248" materialIds="792" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="16" name="earmuffs_vis" translation="0.60144 -0.00056076 -1.16072" clipDistance="100" nodeId="55249" materialIds="447" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="17" name="weldingMask" translation="0.854233 -0.00056839 -1.3721" rotation="0.616371 -17.952 0.501959" dynamic="true" density="1.5" clipDistance="77" nodeId="55250" materialIds="591" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="18" name="weldingMask_vis" clipDistance="77" nodeId="55251" materialIds="454" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

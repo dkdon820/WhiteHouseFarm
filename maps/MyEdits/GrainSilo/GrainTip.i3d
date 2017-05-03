@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="textures/Abladestelle_Tueren_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="textures/Abladestelle_diffuse.dds" relativePath="true"/>
+    <File fileId="5" filename="textures/Gitter_diffuse.dds" relativePath="true"/>
+    <File fileId="7" filename="textures/S_Yellow.dds" relativePath="true"/>
+    <File fileId="6" filename="textures/asphalt_diffuse.dds" relativePath="true"/>
+    <File fileId="3" filename="textures/wheatBottom_diffuse.png" relativePath="true"/>
+    <File fileId="4" filename="textures/wheatBottom_normal.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert12" materialId="115" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="Gitter" materialId="124" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="ablade_Mat" materialId="137" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="lambert10" materialId="138" ambientColor="1 1 1">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="doors_Mat" materialId="116" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="wheat_mat" materialId="113" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+    </Material>
+    <Material name="asphalt_mat" materialId="114" ambientColor="0.1 0 0">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="GrainTip.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Abladestelle" translation="-402.246 99.9593 -508.857" rotation="-180 -16.6848 180" clipDistance="200" nodeId="24081">
+      <TransformGroup name="RaiffeisenAblade" translation="10.078 1.015 4.252" rotation="90 0 90" nodeId="24082">
+        <Shape shapeId="1" name="TorTriggerRechts" translation="0 0 -5.97929" static="true" trigger="true" collisionMask="3145728" nodeId="24083" materialIds="114" nonRenderable="true"/>
+        <Shape shapeId="2" name="TuerLinks" translation="-0.991 2.19725 0.171453" rotation="0.000223085 0 0" kinematic="true" clipDistance="200" nodeId="24084" materialIds="116" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="TuerRechts" translation="-0.992631 -2.32716 0.0420703" rotation="3.9487e-06 0 0" kinematic="true" clipDistance="200" nodeId="24085" materialIds="116" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape shapeId="4" name="Abladestelle" translation="13.0928 0 0" static="true" clipDistance="200" nodeId="24086" materialIds="137" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="5" name="grain" translation="-5.51193 -0.545286 4.2155" scale="0.859449 -0.024629 0.859449" clipDistance="129" nodeId="24087" materialIds="113" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="6" name="Gitter" translation="6.73513 -0.002337 4.19267" static="true" clipDistance="200" nodeId="24088" materialIds="124" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="Wand" translation="7.18098 0.554341 7.32176" rotation="-1.68656e-06 0 0" scale="2 0.545329 1" static="true" nodeId="24089" materialIds="138,115" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="Wand" translation="7.18098 0.554341 1.22936" rotation="-1.68656e-06 0 0" scale="2 0.545329 1" static="true" nodeId="24090" materialIds="138,115" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="Wand" translation="11.6996 0.586408 4.26993" rotation="-5.72615e-05 89.3385 -5.72567e-05" scale="1.448 0.545329 1" static="true" nodeId="24091" materialIds="138,115" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="24082">
+      <Attribute name="index" type="string" value="2DoorTipPlaceWerner"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
