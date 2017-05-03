@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<trainSystem>
+    
+    <spline index="0" splineYOffset="0.155" />
+    
+    <train>
+        <vehicle xmlFile="$data/vehicles/train/locomotive.xml" />
+        <vehicle xmlFile="$data/vehicles/train/wagonTimber.xml" />
+        <vehicle xmlFile="$data/vehicles/train/wagonWoodChips.xml" />
+        <vehicle xmlFile="$data/vehicles/train/wagonGrain.xml" />
+        <vehicle xmlFile="$data/vehicles/train/wagonSugarbeets.xml" />
+    </train>
+    
+</trainSystem>

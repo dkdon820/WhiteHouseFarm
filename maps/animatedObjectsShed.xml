@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<animatedObjects>
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <!-- ALL SHEDS -->
+    <animatedObject index="lightSwitch">
+        <controls posKey="LIGHTSWITCH_CLICK" triggerNode="0" posText="input_LIGHTSWITCH_CLICK" negText="input_LIGHTSWITCH_CLICK" />
+         <sound file="maps/sounds/switch.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="0.25">
+            <part node="1|0"> <!--index of Lever of the Lightswitch-->
+		    <keyFrame time="0.00" rotation="0 0 0" />
+		    <keyFrame time="1" rotation="0 0 -8" />
+	    </part>
+	    <part node="2|0"> <!--index of TG with realLights and emmisive shape-->
+		    <keyFrame time="0.5" visibility="false" />
+		    <keyFrame time="0.55" visibility="true" />
+	    </part>
+        </animation>
+    </animatedObject>
+
+    <!-- GRAIN STORAGE -->
+    <animatedObject index="doorRight">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.05" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 5.8" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.95" translation="0 0 5.8" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="doorLeft">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.95" translation="0 0 -5.8" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.05" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 -5.8" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="doorBoth">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.47" translation="0 0 2.6" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.53" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 -2.6" />
+            </part>
+        </animation>
+    </animatedObject>
+
+    <!-- VEHICLE SHELTER MEDIUM -->
+    <animatedObject index="oneDoorRight">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR"/>
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="1" translation="0 0 4.5" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="oneDoorLeft">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR"/>
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.6" translation="0 0 -4.5" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="doorBothMedium">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.47" translation="0 0 -3.4" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.53" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 3.4" />
+            </part>
+        </animation>
+    </animatedObject>
+
+    <!-- VEHICLE SHELTER SMALL -->
+    <animatedObject index="doorRightSmall">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.05" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 6.4" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.95" translation="0 0 6.4" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="doorLeftSmall">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.95" translation="0 0 -6.4" />
+            </part>
+            <part node="2">
+                <keyFrame time="0.05" translation="0 0 0" />
+                <keyFrame time="1.00" translation="0 0 -6.4" />
+            </part>
+        </animation>
+    </animatedObject>
+	
+	 <!-- GRAIN BARNS -->
+    <animatedObject index="GB_oneDoorRight">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.05" translation="0 0 0" />
+                <keyFrame time="1.00" translation="5.5 0 0" />
+            </part>
+        </animation>
+    </animatedObject>
+    <animatedObject index="GB_oneDoorLeft">
+        <controls posKey="ANIMATED_OBJECT_OPEN_DOOR" negKey="ANIMATED_OBJECT_CLOSE_DOOR" triggerNode="0" posText="input_ANIMATED_OBJECT_OPEN_DOOR" negText="input_ANIMATED_OBJECT_CLOSE_DOOR" />
+        <sound file="maps/sounds/door.wav" pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15" />
+        <animation initialTime="0" duration="4">
+            <part node="1">
+                <keyFrame time="0.00" translation="0 0 0" />
+                <keyFrame time="0.95" translation="-5.5 0 0" />
+            </part>
+        </animation>
+    </animatedObject>
+</animatedObjects>

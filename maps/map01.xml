@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <filename>maps/map01.i3d</filename>
+    <sounds filename="maps/map01_sound.xml" />
+    <ingameMap filename="maps/pda_map_H.png" width="2048" height="2048" />
+    <environment filename="maps/map01_environment.xml" />
+
+    <culling xzOffset="100" />
+
+    <hotspots>
+        <hotspot name="Shop"         fullName="$l10n_map_shop"             imageUVs="520 8 240 240"   xMapPos="-208.213"   zMapPos="-259.733" blinking="false" persistent="false" showName="true"  hidable="true" renderLast="false" category="CATEGORY_TRIGGERS"/>
+        <hotspot name="Cows"         fullName="$l10n_animals_cowPasture"   imageUVs="520 264 240 240" xMapPos="-476.288"   zMapPos="-602.206"   blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="Sheep"        fullName="$l10n_animals_sheepPasture" imageUVs="264 264 240 240" xMapPos="-768.274"   zMapPos="-434.02"  blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="Pigs"         fullName="$l10n_animals_pigPasture"   imageUVs="776 264 240 240" xMapPos="-679.808"  zMapPos="-608.959"  blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="Chickens"     fullName="$l10n_animals_chickenCoop"  imageUVs="8 264 240 240"   xMapPos="-694.387"    zMapPos="-517.604"    blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+    </hotspots>
+
+    <additionalFiles>
+        <additionalFile filename="$data/shared/materialHolders/tensionBeltMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/materialHolders/tireTrackMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/materialHolders/glowEffectMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/mapTargetMarker.i3d" />
+        <additionalFile filename="$data/particleSystems/particle_materialHolder.i3d" />
+        <additionalFile filename="$data/particleSystems/effect_materialHolder.i3d" />
+        <additionalFile filename="$data/particleSystems/cutterEffect_materialHolder.i3d" />
+        <additionalFile filename="$data/particleSystems/cutterEffectMap01_materialHolder.i3d" />
+        <additionalFile filename="$data/fillPlanes/fillPlane_materialHolder.i3d" />
+    </additionalFiles>
+
+    <tipTriggers>
+<!-- SILO -->
+        <tipTrigger index="FARM_SILO" stationName="Sandy Bay Silo" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="true" storageRadius="100" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="true" disablePriceDrop="true" />
+        </tipTrigger>
+        
+<!-- BGA -->
+        <tipTrigger index="BGA_BUNKER" stationName="Sandy Bay BGA" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="2.5" litersForFullPriceDrop="300000" fullPriceRecoverHours="48">
+            <fillType name="silage"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="true" allowTrailers="true" />
+            <fillType name="liquidManure" priceScale="1" supportsGreatDemand="true" disablePriceDrop="true" allowTrailers="true" />
+            <fillType name="manure"       priceScale="1" supportsGreatDemand="true" disablePriceDrop="true" allowTrailers="true" />
+        </tipTrigger>
+
+        <tipTrigger index="BGA_BUNKER_SILO" stationName="station_bgaBunkerSilo" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="6" >
+            <fillType name="chaff"            priceScale="0" supportsGreatDemand="false" disablePriceDrop="false" />
+            <fillType name="grass_windrow"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="false" />
+            <fillType name="dryGrass_windrow" priceScale="0" supportsGreatDemand="false" disablePriceDrop="false" />
+        </tipTrigger>
+
+<!-- SELLING POINTS -->
+        <tipTrigger index="TOWN_BAKERY" stationName="station_townBakeryGCV" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="100000" fullPriceRecoverHours="48">
+            <fillType name="wheat"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"             priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"          priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"            priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"           priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet"        priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="GRAIN_ELEVATOR" stationName="Little Ham stores" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+            <fillType name="wheat"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="FARMER_1" stationName="Sandy Bay Stores" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+            <fillType name="wheat"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="FARMER_2" stationName="Goods depo" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+            <fillType name="wheat"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="FARMER_2_MANURE" stationName="station_farmer2GCV" appearsOnPDA="false" appearsOnStats="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="80000" fullPriceRecoverHours="48">
+            <fillType name="manure"    priceScale="1.3" supportsGreatDemand="false" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="FARMER_3" stationName="station_farmer3GCV" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+            <fillType name="wheat"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"      priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"   priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"     priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"    priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="FARMER_3_SLURRY" stationName="station_farmer3GCV" appearsOnPDA="false" appearsOnStats="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="80000" fullPriceRecoverHours="48">
+            <fillType name="liquidManure" priceScale="1.3" supportsGreatDemand="false" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="SPINNERY" stationName="station_spinnery" appearsOnPDA="true" isAreaTrigger="false" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="100000" fullPriceRecoverHours="48">
+            <fillType name="wool" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="RAILROAD_MILL" stationName="station_railroadMillGCV" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" isTrainOnly="true" triggerWidth="3" litersForFullPriceDrop="300000" fullPriceRecoverHours="48">
+            <fillType name="wheat"     priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="barley"    priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="rape"      priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sunflower" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="soybean"   priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="maize"     priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="potato"    priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+            <fillType name="sugarBeet" priceScale="1.1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="SAWMILL" stationName="Devon Sawmill" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="3" litersForFullPriceDrop="200000" fullPriceRecoverHours="48">
+            <fillType name="woodChips" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false" />
+        </tipTrigger>
+
+        <tipTrigger index="WINDROW_STORAGE" stationName="Sandy Bay Farm Barn" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="6" >
+            <fillType name="grass_windrow"    priceScale="1.1" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="dryGrass_windrow" priceScale="1.1" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="straw"            priceScale="1.1" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="WINDROW_STORAGE1" stationName="Willow Farm Barn" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="6" >
+            <fillType name="grass_windrow"    priceScale="1.0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="dryGrass_windrow" priceScale="1.1" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="straw"            priceScale="1.0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+        
+        <tipTrigger index="WINDROW_STORAGE2" stationName="Sandy Bay Barn" appearsOnPDA="true" isAreaTrigger="true" isSellingPoint="true" triggerWidth="6" >
+            <fillType name="grass_windrow"    priceScale="1.2" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="dryGrass_windrow" priceScale="1.2" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="straw"            priceScale="1.2" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+<!-- TRAIN SILOS -->
+        <tipTrigger index="TRAIN_STATION_1_TRAILER_IN" stationName="station_trainStation1" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRAIN_STATION_1_TRAIN_IN" stationName="station_trainStation1" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" isTrainOnly="true" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRAIN_STATION_2_TRAILER_IN" stationName="station_trainStation2" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRAIN_STATION_2_TRAIN_IN" stationName="station_trainStation2" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" isTrainOnly="true" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRANSPORT_HUB_TRAILER_IN" stationName="station_transportHub" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRANSPORT_HUB_TRAIN_IN_1" stationName="station_transportHub" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+
+        <tipTrigger index="TRANSPORT_HUB_TRAIN_IN_2" stationName="station_transportHub" appearsOnPDA="false" isAreaTrigger="true" isSellingPoint="false" triggerWidth="3" supportsExtension="false" storageRadius="50" >
+            <fillType name="wheat"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="barley"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="rape"       priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="maize"      priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sunflower"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="soybean"    priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="sugarBeet"  priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+            <fillType name="potato"     priceScale="0" supportsGreatDemand="false" disablePriceDrop="true" />
+        </tipTrigger>
+    </tipTriggers>
+    <vertexBufferMemoryUsage>32712080</vertexBufferMemoryUsage>
+    <indexBufferMemoryUsage>2990398</indexBufferMemoryUsage>
+    <textureMemoryUsage>531019064</textureMemoryUsage>
+</map>
