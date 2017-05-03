@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="SL/Batiments/corpdefermemathieu/hangar_modul/blocs.dds" relativePath="true"/>
+    <File fileId="6" filename="SL/Batiments/corpdefermemathieu/metal.png" relativePath="true"/>
+    <File fileId="3" filename="SL/ModelModificationcoco/ferme/RAL gris.dds" relativePath="true"/>
+    <File fileId="5" filename="SL/ModelModificationcoco/ferme/blocs.dds" relativePath="true"/>
+    <File fileId="2" filename="SL/ModelModificationcoco/ferme/cour ferme.dds" relativePath="true"/>
+    <File fileId="1" filename="SL/ModelModificationcoco/ferme/tole beige.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="acmat_5" materialId="8" ambientColor="1 1 1" cosPower="130" specularColor="0.2 0.2 0.2">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="Material #34" materialId="9" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="Material #29" materialId="10" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="Material #31" materialId="6" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="Material #27" materialId="7" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="Material #31" materialId="11" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Etable.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Etable" translation="390.654 134.871 106.45" rotation="-180 24.7755 -180" clipDistance="450" nodeId="21">
+      <Shape shapeId="1" name="base toit tole beige" translation="0 0 7.07335" scale="2.5 1 2.4" static="true" nodeId="22" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="base sol pave" translation="-0.0653463 -0.033 -39.3099" scale="2.5 2.5 2.5" static="true" nodeId="23" materialIds="10" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="base extremite pointe 01 tole beige" translation="-3.75298e-06 0 -27.1891" rotation="0 180 0" scale="2.5 1 1" static="true" nodeId="24" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="annexe charpente Gris" translation="0 0 -27.1872" scale="2.5 1 1" static="true" nodeId="25" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -22.3659" scale="2 1 1" static="true" nodeId="26" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -27.3435" scale="2 1 1" static="true" nodeId="27" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -32.3584" scale="2 1 1" static="true" nodeId="28" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -37.3703" scale="2 1 1" static="true" nodeId="29" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="annexe charpente Gris" translation="-2.95185e-06 0 -54.4678" rotation="0 180 0" scale="2.5 1 1" static="true" nodeId="30" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -42.4095" scale="2 1 1" static="true" nodeId="31" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -49.3518" scale="2 1 1" static="true" nodeId="32" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -15.7565" scale="2 1 1.4" static="true" nodeId="33" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -19.3187" scale="2 1 1.4" static="true" nodeId="34" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -26.3156" scale="2 1 1.4" static="true" nodeId="35" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -54.3636" scale="2 1 1" static="true" nodeId="36" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="14.626 -4.1663 -54.7557" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="37" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="annexe charpente Gris" translation="0 0 -40.5437" scale="2.5 1 1" static="true" nodeId="38" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -33.2685" scale="2 1 1.4" static="true" nodeId="39" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="1.68148 -4.18921 -8.17152" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="40" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-2.34117 0 -22.2446" scale="2 1 1" static="true" nodeId="41" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-14.9561 0 -22.2408" scale="2 1 1" static="true" nodeId="42" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -40.2374" scale="2 1 1.4" static="true" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -47.202" scale="2 1 1.4" static="true" nodeId="44" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -50.2876" scale="2 1 1.4" static="true" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -59.3873" scale="2 1 1" static="true" nodeId="46" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -69.3543" scale="2 1 1" static="true" nodeId="47" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="2.49607 0 -64.4173" scale="2 1 1" static="true" nodeId="48" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -10.4225" scale="2 1 1.4" static="true" nodeId="49" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -11.6173" scale="2 1 1.4" static="true" nodeId="50" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -18.515" scale="2 1 1.4" static="true" nodeId="51" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -22.2952" scale="2 1 1" static="true" nodeId="52" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-9.26081 0 -22.2117" scale="2 1 1" static="true" nodeId="53" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="14.6284 -4.18084 -8.15802" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="54" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.747 1.49637 -24.4078" scale="0.5 0.7 0.7" static="true" nodeId="55" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -25.4395" scale="2 1 1.4" static="true" nodeId="56" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -32.3896" scale="2 1 1.4" static="true" nodeId="57" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -39.3334" scale="2 1 1.4" static="true" nodeId="58" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -39.3334" scale="2 1 1.4" static="true" nodeId="59" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -69.3311" scale="2 1 1" static="true" nodeId="60" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -46.2996" scale="2 1 1.4" static="true" nodeId="61" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-21.5622 -4.1663 -50.308" scale="2 1 1.4" static="true" nodeId="62" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="10.956 -4.1663 -54.7594" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="63" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-7.30729 0 -69.3311" scale="2 1 1" static="true" nodeId="64" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-17.3921 0 -69.3311" scale="2 1 1" static="true" nodeId="65" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-12.6441 0 -69.3311" scale="2 1 1" static="true" nodeId="66" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-2.37673 0 -69.3311" scale="2 1 1" static="true" nodeId="67" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -50.2876" scale="2 1 1.4" static="true" nodeId="68" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.936 -5.81349 -43.3255" scale="2 1 1.4" static="true" nodeId="69" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -36.4341" scale="2 1 1.4" static="true" nodeId="70" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -29.4817" scale="2 1 1.4" static="true" nodeId="71" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -22.664" scale="2 1 1.4" static="true" nodeId="72" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -15.7498" scale="2 1 1.4" static="true" nodeId="73" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="-1.93559 -5.81349 -11.0163" scale="2 1 1.4" static="true" nodeId="74" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -58.3209" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="75" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -52.3973" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="76" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -46.4738" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="77" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -40.5833" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="78" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -34.7023" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="79" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.418 0.159018 -28.7832" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="80" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -22.8791" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="81" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="g2_group" translation="7.41753 0.159018 -17.2971" rotation="0 90 0" scale="0.9 1.09 0.85" static="true" clipDistance="50" nodeId="82" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -25.628" scale="0.5 0.7 0.7" static="true" nodeId="83" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -29.0986" scale="0.5 0.7 0.7" static="true" nodeId="84" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -30.6136" scale="2 1 1" static="true" nodeId="85" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -32.5962" scale="0.5 0.7 0.7" static="true" nodeId="86" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -36.0582" scale="0.5 0.7 0.7" static="true" nodeId="87" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -39.6383" scale="0.5 0.7 0.7" static="true" nodeId="88" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -37.5898" scale="2 1 1" static="true" nodeId="89" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -43.1094" scale="0.5 0.7 0.7" static="true" nodeId="90" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -44.6025" scale="2 1 1" static="true" nodeId="91" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -46.6029" scale="0.5 0.7 0.7" static="true" nodeId="92" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -50.0739" scale="0.5 0.7 0.7" static="true" nodeId="93" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -51.6223" scale="2 1 1" static="true" nodeId="94" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -53.6599" scale="0.5 0.7 0.7" static="true" nodeId="95" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -57.121" scale="0.5 0.7 0.7" static="true" nodeId="96" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -58.634" scale="2 1 1" static="true" nodeId="97" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -60.6477" scale="0.5 0.7 0.7" static="true" nodeId="98" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -64.1292" scale="0.5 0.7 0.7" static="true" nodeId="99" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="annexe poutre 07 gris" translation="-22.0597 0 -65.6408" scale="2 1 1" static="true" nodeId="100" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-14.7465 1.49637 -68.0824" scale="0.5 0.7 0.75" static="true" nodeId="101" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="base extremite pointe 01 tole beige" translation="-7.8865e-06 0 -74.471" rotation="0 180 0" scale="2.5 1 1" static="true" nodeId="102" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-6.50043 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="103" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-3.38199 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.75" static="true" nodeId="104" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="0.559 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="105" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="2.85721 -4.1663 -10.4123" scale="2 1 1.4" static="true" nodeId="106" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-15.9162 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="107" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-12.4134 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="108" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-9.44793 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="109" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="4.03946 -4.1663 -54.7594" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="110" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="1.93383 -4.1663 -54.7594" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="111" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-15.5654 1.496 -14.9853" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="112" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="0.228003 1.49637 -14.9853" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="113" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-12.0044 1.49637 -14.9853" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="114" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="-3.12319 1.49637 -14.9853" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="115" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.9276 1.49637 -24.4078" scale="0.5 0.7 0.7" static="true" nodeId="116" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.9276 1.49637 -27.9102" scale="0.5 0.7 0.7" static="true" nodeId="117" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -31.3552" scale="0.5 0.7 0.7" static="true" nodeId="118" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -34.879" scale="0.5 0.7 0.7" static="true" nodeId="119" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -38.3906" scale="0.5 0.7 0.7" static="true" nodeId="120" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -41.9212" scale="0.5 0.7 0.7" static="true" nodeId="121" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -45.4003" scale="0.5 0.7 0.7" static="true" nodeId="122" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -48.8545" scale="0.5 0.7 0.7" static="true" nodeId="123" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -52.2922" scale="0.5 0.7 0.7" static="true" nodeId="124" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -55.8084" scale="0.5 0.7 0.7" static="true" nodeId="125" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -59.328" scale="0.5 0.7 0.7" static="true" nodeId="126" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -62.6778" scale="0.5 0.7 0.7" static="true" nodeId="127" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.928 1.49637 -67.8977" scale="0.5 0.7 0.7" static="true" nodeId="128" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="9.91305 1.49637 -65.5697" scale="0.5 0.7 0.7" static="true" nodeId="129" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="base cote 04 blocs" translation="19.477 -4.1663 -54.7557" rotation="0 90 0" scale="2 1 1.4" static="true" nodeId="130" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="4.04 1.49637 -62.0391" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="131" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="base cote 01 blocs" translation="5.08958 1.49637 -62.0527" rotation="0 90 0" scale="0.5 0.7 0.7" static="true" nodeId="132" materialIds="11" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
