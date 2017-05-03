@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+    </Asset>
+    <Files>
+        <File fileId="1" filename="Divers/StabuModulable/CotePlein.dds" relativePath="true"/>
+        <File fileId="2" filename="Divers/StabuModulable/travee.dds" relativePath="true"/>
+    </Files>
+    <Materials>
+        <Material name="Material #176" materialId="107" ambientColor="0.588 0.588 0.588">
+            <Texture fileId="2"/>
+        </Material>
+        <Material name="Material #209" materialId="461" ambientColor="0.588 0.588 0.588">
+            <Texture fileId="1"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="3piece.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <Shape shapeId="1" name="2SortieDroite" translation="611.472 130.795 -134.77" rotation="0 15.304 0" scale="0.83 0.903 1" static="true" clipDistance="450" nodeId="21639" materialIds="461" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="2" name="SortieGauche" translation="608.845 130.753 -144.371" rotation="0 15.304 0" scale="0.83 0.903 1" static="true" clipDistance="450" nodeId="21640" materialIds="107" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="TraveeSeul" translation="606.204 130.795 -154.021" rotation="0 15.304 0" scale="0.83 0.903 1" static="true" nodeId="21642" materialIds="107" castsShadows="true" receiveShadows="true"/>
+    </Scene>
+</i3D>
