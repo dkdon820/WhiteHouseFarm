@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<prefabDesc descVersion="1">
+    <author>Desperados93</author>
+    <version>1.0.0.0</version>
+	<title>
+        <en>Wood unloading place</en>
+		<de>Holzabladeplatz</de>
+		<fr>bois de dumping</fr>
+    </title>
+	<description>
+        <en>
+            <![CDATA[Here you can clean the wood and then process it further
+		]]>
+        </en>
+        <de>
+            <![CDATA[Hier können Sie Holz reinlegen um es dann weiter zu verarbeiten
+			]]>
+        </de>
+		<fr>
+            <![CDATA[Ici vous pouvez reinlegen bois puis poursuite du processus
+			]]>
+        </fr>		
+    </description>
+	<categories>
+        <category>tools</category>
+    </categories>
+	<prefabs>
+		<prefab name="holzlagerplatz" i3dFilename="holzlagerplatz.i3d" />
+    </prefabs>
+</prefabDesc>

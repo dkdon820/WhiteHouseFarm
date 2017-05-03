@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Shed1A" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="../shaders/emissiveLightsShader.xml" relativePath="true"/>
+    <File fileId="7" filename="../textures/doors_diffuse.dds" relativePath="true"/>
+    <File fileId="8" filename="../textures/doors_norm.png" relativePath="true"/>
+    <File fileId="9" filename="../textures/doors_spec.dds" relativePath="true"/>
+    <File fileId="3" filename="../textures/shed1_spec.dds" relativePath="true"/>
+    <File fileId="1" filename="../textures/shed1rust_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="../textures/shed1rust_norm.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="light" materialId="8" ambientColor="1 1 1" emissiveColor="1 1 1 0.894118" alphaBlending="true" customShaderId="6" customShaderVariation="STATIC_LIGHT">
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+    <Material name="gate" materialId="9" ambientColor="0.7 0.7 0.7" cosPower="20" specularColor="0.6 0.6 0.6">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8" bumpDepth="0"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="lambert1" materialId="10" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="Shed1" materialId="6" ambientColor="0.7 0.7 0.7" cosPower="20" specularColor="0.6 0.6 0.6">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Shed1A.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Shed1A" scale="0.393701 0.393701 0.394" static="true" nodeId="34">
+      <Shape shapeId="1" name="structure" static="true" nodeId="35" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="wall" static="true" nodeId="36" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="top_cladding" static="true" nodeId="37" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="flashing" static="true" nodeId="38" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="guttering" static="true" nodeId="39" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="lighting" static="true" nodeId="40">
+        <TransformGroup name="lightCasings" static="true" nodeId="41">
+          <TransformGroup name="Hangers" static="true" nodeId="42">
+            <Shape shapeId="6" name="hangers1" static="true" nodeId="43" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="hangers2" static="true" nodeId="44" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="8" name="hangers3" static="true" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape shapeId="9" name="light_casing1" static="true" nodeId="46" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="10" name="light_casing2" static="true" nodeId="47" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="11" name="light_casing3" static="true" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="switchableLights" static="true" nodeId="49">
+        <Shape shapeId="12" name="triggerForSwitch1" translation="27.638 -13.564 -10.8599" scale="4 5 6" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="50" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="realLights" nodeId="51">
+          <Shape shapeId="13" name="light1" translation="0 -0.0553437 0" clipDistance="150" nodeId="52" materialIds="8" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="14" name="light2" clipDistance="150" nodeId="53" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="15" name="light3" clipDistance="150" nodeId="54" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Light name="pointLight3" translation="-15.385 10.53 0" clipDistance="150" nodeId="55" type="point" color="1 0.9 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="10"/>
+          <Light name="pointLight1" translation="0 10.53 0" clipDistance="150" nodeId="56" type="point" color="1 0.9 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="10"/>
+          <Light name="pointLight2" translation="15.385 10.53 0" rotation="2 -0 0" clipDistance="150" nodeId="57" type="point" color="1 0.9 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="10"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="double_doors" static="true" clipDistance="10000" nodeId="58">
+        <TransformGroup name="door2" static="true" nodeId="59">
+          <Shape shapeId="16" name="door2Trigger" translation="30.3226 6.66823 7.13792" scale="1.5 3.5 4" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="60" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="17" name="door2" kinematic="true" nodeId="61" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="door1" static="true" nodeId="62">
+          <Shape shapeId="16" name="door1Trigger" translation="30.3226 6.66823 -6.94446" scale="1.5 3.5 4" static="true" trigger="true" collisionMask="3145728" clipDistance="500" nodeId="63" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="18" name="door1" kinematic="true" nodeId="64" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="Door_runners" static="true" nodeId="65">
+          <Shape shapeId="19" name="runners_bottom" static="true" nodeId="66" materialIds="9" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="20" name="runners_top" translation="-0.02 0 0" static="true" nodeId="67" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="addons" static="true" nodeId="68">
+        <Shape shapeId="21" name="switch" static="true" nodeId="69" materialIds="9" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="22" name="elecbox" static="true" nodeId="70" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="49">
+      <Attribute name="index" type="string" value="lightSwitch001"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="59">
+      <Attribute name="index" type="string" value="doorLeft001"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+    <UserAttribute nodeId="62">
+      <Attribute name="index" type="string" value="doorRight001"/>
+      <Attribute name="onCreate" type="scriptCallback" value="AnimatedObject.onCreate"/>
+      <Attribute name="xmlFilename" type="string" value="maps/animatedObjects.xml"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
