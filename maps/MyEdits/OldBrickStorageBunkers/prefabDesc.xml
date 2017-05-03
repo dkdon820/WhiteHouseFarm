@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<prefabDesc descVersion="1">
+    <author>Dorset</author>
+    <version>1.0.0.0</version>
+	<title>
+        <en>Old Style Brick Storage Bunkers</en>
+		<de>Ziegelmauer Bunkerlager</de>
+		<fr>Bunkers De Stockage Vieux Style Brique</fr>
+    </title>
+        <description>
+        <en>Old style brick storage bunkers for your crops.
+Can be placed next to the side of your fields.
+Three styles to chose from
+1 Two sided with wooden support for damaged wall.
+2 Single bunker with damaged wall.
+2 Double bunker with damaged walls.
+        </en>
+        <de>Bunkerlager aus einer alten Ziegelmauer für Ihre Früchte.
+
+Drei Stile zur Auswahl:
+1 Zweiseitig mit Holzstütze für eine beschädigte Wand.
+2 Einzelner Bunker mit beschädigter Wand.
+2 Doppelter Bunker mit beschädigten Wänden.
+        </de>
+        <fr>Vieux bunkers de stockage brique style pour vos cultures.
+Peut être placé à côté du côté de vos champs.
+Trois styles a choisi de
+1 2 Facer avec support en bois pour mur endommagé.
+2 bunker unique avec mur endommagé.
+2 bunker double avec endommagé les murs.
+        </fr>
+    </description>
+	<categories>
+        <category>Dynamic</category>
+    </categories>
+	<prefabs>
+		<prefab name="brick grain storage" i3dFilename="brick_grain_storage.i3d" />
+		<prefab name="brick grain storage pit" i3dFilename="brick_grain_storage_pit.i3d" />
+		<prefab name="brick grain storage double pit" i3dFilename="brick_grain_storage_double_pit.i3d" />
+    </prefabs>
+</prefabDesc>
