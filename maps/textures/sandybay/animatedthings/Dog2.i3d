@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="golden_retriever.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Dog_newUV_03:initialShadingGroup1_ncl1_1" materialId="6" ambientColor="0.6 0.6 0.6">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Dog2.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Hips" translation="0 0.519 0" clipDistance="150" nodeId="1475">
+      <TransformGroup name="Spine" translation="3.84914e-10 0 0.0635061" clipDistance="150" nodeId="1476">
+        <TransformGroup name="Spine1" translation="0 0 0.0635061" clipDistance="150" nodeId="1477">
+          <TransformGroup name="Spine2" translation="0 0 0.0620013" clipDistance="150" nodeId="1478">
+            <TransformGroup name="Spine3" translation="0 0 0.0620013" clipDistance="150" nodeId="1479">
+              <TransformGroup name="Spine4" translation="0 0 0.0605914" clipDistance="150" nodeId="1480">
+                <TransformGroup name="Spine5" translation="0 0 0.0605914" clipDistance="150" nodeId="1481">
+                  <TransformGroup name="Spine6" translation="0 0 0.0604598" clipDistance="150" nodeId="1482">
+                    <TransformGroup name="Spine7" translation="0 0 0.0568546" clipDistance="150" nodeId="1483">
+                      <TransformGroup name="Neck" translation="6.1131e-11 -0.0224744 0.053253" clipDistance="150" nodeId="1484">
+                        <TransformGroup name="Neck1" translation="0 0.0188695 0.0184996" clipDistance="150" nodeId="1485">
+                          <TransformGroup name="Neck2" translation="0 0.0267053 0.0112141" nodeId="1486">
+                            <TransformGroup name="Neck3" translation="0 0.0271749 0.010695" nodeId="1487">
+                              <TransformGroup name="Neck4" translation="0 0.026794 0.0130535" nodeId="1488">
+                                <TransformGroup name="Neck5" translation="0 0.0199237 0.0199237" nodeId="1489">
+                                  <TransformGroup name="Head" translation="0 0.00639158 0.0168557" nodeId="1490">
+                                    <TransformGroup name="Jaw" translation="0 -0.0646692 0.0727941" nodeId="1491"/>
+                                    <TransformGroup name="L_Ear" translation="0.0696708 0.0351086 0.0234487" nodeId="1492">
+                                      <TransformGroup name="L_Ear2" translation="0.011866 -0.0342607 0.00344012" nodeId="1493">
+                                        <TransformGroup name="L_Ear4" translation="0.00252803 -0.0345028 0.00407292" nodeId="1494"/>
+                                      </TransformGroup>
+                                    </TransformGroup>
+                                    <TransformGroup name="R_Ear" translation="-0.0696708 0.0351083 0.0234485" nodeId="1495">
+                                      <TransformGroup name="R_Ear2" translation="-0.011866 -0.03426 0.00344" nodeId="1496">
+                                        <TransformGroup name="R_Ear4" translation="-0.002528 -0.034503 0.004073" nodeId="1497"/>
+                                      </TransformGroup>
+                                    </TransformGroup>
+                                  </TransformGroup>
+                                </TransformGroup>
+                              </TransformGroup>
+                            </TransformGroup>
+                          </TransformGroup>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="LeftShoulder" translation="0.0126596 -0.0531517 -0.0002172" nodeId="1498">
+                        <TransformGroup name="LeftArm" translation="0.0810904 -0.0166877 0.00592672" nodeId="1499">
+                          <TransformGroup name="LeftForeArm" translation="0.00325924 -0.169293 -0.055109" nodeId="1500">
+                            <TransformGroup name="LeftHand" translation="0.00310589 -0.186415 0.00800309" nodeId="1501">
+                              <TransformGroup name="LeftFingerBase" translation="0.000771 -0.0527255 0.00589663" nodeId="1502">
+                                <TransformGroup name="LeftHandIndex1" translation="0.00686807 -0.0196734 0.0274145" nodeId="1503">
+                                  <TransformGroup name="LeftHandIndex2" translation="0.00993593 -0.0212961 0.0376169" nodeId="1504"/>
+                                </TransformGroup>
+                              </TransformGroup>
+                            </TransformGroup>
+                          </TransformGroup>
+                        </TransformGroup>
+                      </TransformGroup>
+                      <TransformGroup name="RightShoulder" translation="-0.0126596 -0.053152 -0.00021688" nodeId="1505">
+                        <TransformGroup name="RightArm" translation="-0.0810904 -0.016687 0.005926" nodeId="1506">
+                          <TransformGroup name="RightForeArm" translation="-0.0032592 -0.169293 -0.055109" nodeId="1507">
+                            <TransformGroup name="RightHand" translation="-0.0031058 -0.186415 0.008004" nodeId="1508">
+                              <TransformGroup name="RightFingerBase" translation="-0.000771 -0.0527254 0.005896" nodeId="1509">
+                                <TransformGroup name="RightHandIndex1" translation="-0.006868 -0.0196735 0.027415" nodeId="1510">
+                                  <TransformGroup name="RightHandIndex2" translation="-0.009936 -0.0212961 0.0376169" nodeId="1511"/>
+                                </TransformGroup>
+                              </TransformGroup>
+                            </TransformGroup>
+                          </TransformGroup>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="LeftUpLeg" translation="0.09375 -0.028145 -0.00835999" clipDistance="150" nodeId="1512">
+        <TransformGroup name="LeftLeg" translation="-0.0105451 -0.225 0.0112493" nodeId="1513">
+          <TransformGroup name="LeftFoot" translation="0.00558266 -0.137317 -0.101389" nodeId="1514">
+            <TransformGroup name="LeftToeBase" translation="-0.00100464 -0.0851927 0.0157924" nodeId="1515">
+              <TransformGroup name="LeftFootIndex1" translation="0.00346313 -0.0229534 0.0259054" nodeId="1516">
+                <TransformGroup name="LeftFootIndex2" translation="0.00450183 -0.0203921 0.0453622" nodeId="1517"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Tail" translation="-1.00707e-10 0.0154193 -0.0598953" clipDistance="150" nodeId="1518">
+        <TransformGroup name="Tail1" translation="0 -0.0167398 -0.0679439" nodeId="1519">
+          <TransformGroup name="Tail2" translation="0 -0.00391192 -0.0526811" nodeId="1520">
+            <TransformGroup name="Tail3" translation="0 -0.00312953 -0.0526812" nodeId="1521">
+              <TransformGroup name="Tail4" translation="0 -0.00156477 -0.059574" nodeId="1522">
+                <TransformGroup name="Tail5" translation="0 -0.00234715 -0.059574" nodeId="1523">
+                  <TransformGroup name="Tail6" translation="0 -0.00078238 -0.0571123" nodeId="1524">
+                    <TransformGroup name="Tail7" translation="0 -0.00156477 -0.0571123" nodeId="1525">
+                      <TransformGroup name="Tail8" translation="0 -0.00156476 -0.0536658" nodeId="1526">
+                        <TransformGroup name="TailEND" translation="1e-15 0.00078238 -0.0536658" nodeId="1527"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="RightUpLeg" translation="-0.09375 -0.028145 -0.00835999" clipDistance="150" nodeId="1528">
+        <TransformGroup name="RightLeg" translation="0.0105451 -0.225 0.0112493" nodeId="1529">
+          <TransformGroup name="RightFoot" translation="-0.0055827 -0.137317 -0.101388" nodeId="1530">
+            <TransformGroup name="RightToeBase" translation="0.0010047 -0.0851929 0.015792" nodeId="1531">
+              <TransformGroup name="RightFootIndex1" translation="-0.0034632 -0.0229534 0.0259055" nodeId="1532">
+                <TransformGroup name="RightFootIndex2" translation="-0.0045018 -0.020392 0.0453622" nodeId="1533"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+    <Shape shapeId="1" name="Mixamo_Goldenretriever_8k" clipDistance="150" nodeId="1534" materialIds="6" castsShadows="true" receiveShadows="true" skinBindNodeIds="1475 1476 1477 1478 1479 1480 1481 1482 1483 1484 1485 1486 1487 1488 1489 1490 1491 1492 1493 1494 1495 1496 1497 1498 1499 1500 1501 1502 1503 1504 1505 1506 1507 1508 1509 1510 1511 1512 1513 1514 1515 1516 1517 1518 1519 1520 1521 1522 1523 1524 1525 1526 1527 1528 1529 1530 1531 1532 1533"/>
+    <Camera name="persp" translation="-41.9894 84.5084 -94.3998" rotation="-13.3485 18.7706 -5.91762e-07" visibility="false" nodeId="1535" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+  </Scene>
+
+
+  <Animation externalAnimFile="Dog2.i3d.anim" />
+</i3D>
