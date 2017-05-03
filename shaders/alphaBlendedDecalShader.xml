@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CustomShader version="3">
+    <Variations>
+        <Variation name="distanceField">
+<![CDATA[
+    #define DISTANCE_FIELD
+]]>
+        </Variation>
+    </Variations>
+    <LodLevel startDistance="0">
+        <CodeInjections>
+            <CodeInjection position="ALPHA_FS">
+<![CDATA[
+#if defined(ALPHA_BLENDED)
+    #if defined(DISTANCE_FIELD)
+        float smoothing = 0.05;
+        alpha = smoothstep(0.5 - smoothing, 0.5 + smoothing, oColor.w);
+    #endif
+    reflectingLightingScale = oColor.w;
+#endif
+]]>
+            </CodeInjection>
+        </CodeInjections>
+    </LodLevel>
+</CustomShader>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CustomShader version="3" classRequirement="">
+    <Textures>
+        <Texture name = "defaultDiffuse" defaultColorProfile = "sRGB"      defaultFilename = "../shared/default_diffuse.png"/>
+    </Textures>
+    <LodLevel startDistance="0">
+        <CodeInjections>
+            <CodeInjection position = "SAMPLERS">
+<![CDATA[
+sampler2D defaultDiffuse;
+]]>
+            </CodeInjection>
+            <CodeInjection position="VS_OUTPUT">
+<![CDATA[
+float2        albedoMapTexCoordsX   :           TEXCOORDn;
+float2        albedoMapTexCoordsY   :           TEXCOORDn;
+float2        albedoMapTexCoordsZ   :           TEXCOORDn;
+]]>
+            </CodeInjection>
+            <CodeInjection position="POST_SET_TEXCOORDS_VS">
+<![CDATA[
+    float3 fullWorldPosition = worldPosition + float3(invViewMatrix[0][3], invViewMatrix[1][3], invViewMatrix[2][3]);
+    float mUVScale = 0.1;
+    Out.albedoMapTexCoordsX = mUVScale * fullWorldPosition.yz;
+    Out.albedoMapTexCoordsY = mUVScale * fullWorldPosition.xz;
+    Out.albedoMapTexCoordsZ = mUVScale * fullWorldPosition.xy;
+]]>
+            </CodeInjection>
+            <CodeInjection position="POST_ALBEDO_FS">
+<![CDATA[
+#if defined( ALBEDO_MAP )
+    float3 mTexX = tex2D( defaultDiffuse, In.vs.albedoMapTexCoordsX );
+    float3 mTexY = tex2D( defaultDiffuse, In.vs.albedoMapTexCoordsY );
+    float3 mTexZ = tex2D( defaultDiffuse, In.vs.albedoMapTexCoordsZ );
+
+    float3 mAbsNormal = abs(In.vs.worldNormal);
+
+    float3 mResult = float3( 0.0, 0.0, 0.0 );
+    mResult = lerp( mTexX, mTexZ, abs( mAbsNormal.z ) );
+    mResult = lerp( mResult, mTexY, abs( mAbsNormal.y ) );
+    albedo.rgb = mResult;
+#endif
+]]>
+            </CodeInjection>
+        </CodeInjections>
+    </LodLevel>
+</CustomShader>

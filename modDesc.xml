@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="31">
+    <author>Oxygendavid</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <en>Sandy Bay 17 - White House Farm Edition V2</en>
+        <de>Sandy Bay 17 - White House Farm Edition V2</de>
+        <fr>Sandy Bay 17 - White House Farm Edition V2</fr>
+    </title>
+
+    <description>
+        <en>
+<![CDATA[Welcome to Sandy Bay 17....This is a fictional map set in devon uk with many great views.
+
+- This map includes all Farming Simulator 17 features.
+- Custom crop/Grass textures with many other new textures.
+- Two farms (all animals are at the main farm).
+- 3 sell points,BGA etc.
+- 46 fields small/medium/large.
+- Moving clouds.
+- Over 20 new models made by myself.
+- Forestry,sawmill area and missions all included.
+- Lots of animated objects birds,cat,.fish,snake,dogs,train,boats,people,traffic etc. (pc Only).
+- Chopped straw (pc only).
+- Various custom sounds across the map.
+
+I Hope you all like this map.            -Oxygendavid.]]>
+        </en>
+        <de>
+<![CDATA[Willkommen bei Sandy Bay 17 .... Dies ist eine fiktive Karte in devon uk mit vielen tollen Ansichten gesetzt.
+
+- Diese Karte enthält alle Funktionen von Farming Simulator 17.
+- Custom Ernte / Gras Texturen mit vielen anderen neuen Texturen.
+- Zwei Bauernhöfe (alle Tiere sind auf der Hauptfarm).
+- 3 Verkaufspunkte, BGA etc.
+- 46 Felder klein / mittel / groß.
+- Bewegliche Wolken.
+- Über 20 neue Modelle von mir.
+- Forstwirtschaft, Sägewerk und Missionen alle enthalten.
+- Viele animierte Objekte Vögel, Katze, Schlange, Hunde, Zug, Boote, Menschen, Verkehr etc. (pc Only).
+- Gehacktes Stroh (nur pc).
+- Verschiedene benutzerdefinierte Sounds auf der Karte.
+
+Ich hoffe, euch gefällt diese Karte. -Oxygendavid.]]>
+        </de>
+        <fr>
+<![CDATA[Bienvenue à Sandy Bay 17 .... Il s'agit d'une carte fictive situé au Devon Royaume-Uni avec de nombreuses vues superbes.
+
+- Cette carte comprend toutes les fonctionnalités de Farming Simulator 17.
+- Textures de culture / herbe personnalisées avec beaucoup d'autres nouvelles textures.
+- Deux fermes (tous les animaux sont à la ferme principale).
+- 3 points de vente, BGA etc.
+- 46 champs petits / moyens / grands.
+- Des nuages ​​en mouvement.
+- Plus de 20 nouveaux modèles fabriqués par moi-même.
+- Forêts, scierie et missions tout compris.
+- Beaucoup d'objets animés: oiseaux, chat, serpent, chiens, train, bateaux, personnes, trafic etc. (pc seulement).
+- Paille hachée (pc seulement).
+- Divers sons personnalisés sur la carte.
+
+J'espère que vous aimez tous cette carte. -Oxygendavid.]]>
+        </fr>
+    </description>
+
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+
+    <maps>
+        <map id="SampleModMap" className="ModMap" filename="ModMap.lua" configFilename="maps/map01.xml" defaultVehiclesXMLFilename="defaultVehicles.xml">
+            <title>
+                <en>Sandy Bay 17 - White House Farm Edition V2</en>
+                <de>Sandy Bay 17 - White House Farm Edition V2</de>
+                <fr>Sandy Bay 17 - White House Farm Edition V2</fr>
+            </title>
+            <description>
+                <en>Welcome to Sandy Bay 17. A fictional map set in Devon UK with many great views.</en>
+                <de>Willkommen bei Sandy Bay 17. Eine fiktive Karte in Devon UK mit vielen großartigen Ansichten gesetzt.</de>
+                <fr>Bienvenue à Sandy Bay 17. Une carte fictive établie dans le Devon Royaume-Uni avec de superbes vues.</fr>  
+            </description>
+            <iconFilename>maps/map01_preview.png</iconFilename>
+        </map>
+    </maps>
+    
+    <extraSourceFiles>
+        <sourceFile filename="maps/scripts/AnimalPedestrian.lua" />
+        <sourceFile filename="maps/scripts/ShipFS17.lua" />
+    </extraSourceFiles>
+
+
+
+
+        <l10n>
+		<text name="input_ANIMATED_OBJECT_OPEN_DOOR">
+            <en>Open door</en>
+            <de>Tor öffnen</de>
+        </text>
+        <text name="input_ANIMATED_OBJECT_CLOSE_DOOR">
+            <en>Close door</en>
+            <de>Tor schließen</de>
+        </text>
+        <text name="input_LIGHTSWITCH_CLICK">
+            <en>Lightswitch on/off</en>
+            <de>Lichtschalter an/aus</de>
+        </text>
+		<text name="input_GATE_MOVE">
+            <en>Gate Open/Close</en>
+            <de></de>
+        </text>
+		<text name="input_ANIMATED_OBJECT_OPEN_TIPDOOR">
+            <en>Open pit door</en>
+            <de>Abdeckung öffnen</de>
+        </text>
+        <text name="input_ANIMATED_OBJECT_CLOSE_TIPDOOR">
+            <en>Close pit door</en>
+            <de>Abdeckung schließen</de>
+        </text>
+	</l10n>
+
+    <inputBindings>
+        <input name="ANIMATED_OBJECT_OPEN_DOOR" category="ONFOOT" key1="" key2="" device="0" button="BUTTON_3" mouse="MOUSE_BUTTON_LEFT" />
+        <input name="ANIMATED_OBJECT_CLOSE_DOOR" category="ONFOOT" key1="" key2="" device="0" button="BUTTON_1" mouse="MOUSE_BUTTON_RIGHT" />
+		<input name="LIGHTSWITCH_CLICK" category="ONFOOT" key1="" key2="" device="0" button="BUTTON_3" mouse="MOUSE_BUTTON_LEFT" />
+		<input name="GATE_MOVE" category="ONFOOT" key1="" key2="" device="0" button="BUTTON_3" mouse="MOUSE_BUTTON_LEFT" />		
+	</inputBindings>
+</modDesc>
