@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="Divers/Kiwii/Old_Stream/holzstapel.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="holzstapel_mat" materialId="480" ambientColor="0.5 0.5 0.5">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="logStack.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="polySurface3" translation="-127.85 147.016 -204.605" rotation="180 -2.743 180" static="true" clipDistance="50" nodeId="9967" materialIds="480" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

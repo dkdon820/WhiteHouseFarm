@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Sample Mod Map 1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="cabinetWorkbench_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="cabinetWorkbench_normal.png" relativePath="true"/>
+    <File fileId="3" filename="cabinetWorkbench_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="cabinetWorkbench_mat" materialId="38" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="table02.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="cabinetWorkbenchTable02" translation="-139.383 4.76837e-07 136.618" rotation="-180 -5.00896e-06 -180" static="true" clipDistance="129" nodeId="634" materialIds="38" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

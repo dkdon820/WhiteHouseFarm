@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="textures\SiloExtra_diffuse.dds" relativePath="true"/>
+    <File fileId="6" filename="textures\SiloExtra_normal.dds" relativePath="true"/>
+    <File fileId="3" filename="textures\SiloWall_diffuse.dds" relativePath="true"/>
+    <File fileId="4" filename="textures\SiloWall_normal.dds" relativePath="true"/>
+    <File fileId="10" filename="textures\coronaWhite_diffuse.png" relativePath="true"/>
+    <File fileId="11" filename="emissiveLightsShader.xml" relativePath="true"/>
+    <File fileId="8" filename="lightBeamShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lightBeam_mat" materialId="10" ambientColor="1 1 1" emissiveColor="1 1 1 1" alphaBlending="true" customShaderId="8">
+      <CustomParameter name="UVScaleSpeed" value="1 2 0.005 -0.001"/>
+      <CustomParameter name="colorScale" value="1 0.9 0.85 1"/>
+    </Material>
+    <Material name="Silomauer" materialId="14" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+    </Material>
+    <Material name="lightBeam_mat1" materialId="7" ambientColor="1 1 1" emissiveColor="1 1 1 1" alphaBlending="true" customShaderId="8" customShaderVariation="TOP_DOWN">
+      <CustomParameter name="UVScaleSpeed" value="1 1 0.005 -0.001"/>
+      <CustomParameter name="colorScale" value="1 0.9 0.85 1"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="Material" materialId="9" diffuseColor="0.8 0.8 0.8 1" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+    </Material>
+    <Material name="Silomauer_Extras" materialId="11" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+    </Material>
+    <Material name="coronaWhite_mat" materialId="13" ambientColor="1 1 1" alphaBlending="true" customShaderId="11" customShaderVariation="BILLBOARD">
+      <Emissivemap fileId="10"/>
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="BGASilo.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="BGASilo_Doppel" clipDistance="800" nodeId="23">
+      <TransformGroup name="Silo1" clipDistance="800" objectMask="65534" nodeId="24">
+        <TransformGroup name="gameplay" rotation="0 90 0" nodeId="25">
+          <Shape shapeId="1" name="interactionTrigger" translation="6.8 0 5.14779" scale="0.77 1 2.11" static="true" trigger="true" collisionMask="15736832" nodeId="26" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="bunkerSiloArea" translation="30.75 0 -5" nodeId="27">
+            <TransformGroup name="start" nodeId="28"/>
+            <TransformGroup name="width" translation="0 0 20.225" nodeId="29"/>
+            <TransformGroup name="height" translation="-47.9 0 0" nodeId="30"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="Silo2" translation="-20.225 0 0" clipDistance="800" objectMask="65534" nodeId="31">
+        <TransformGroup name="gameplay" rotation="0 90 0" nodeId="32">
+          <Shape shapeId="1" name="interactionTrigger" translation="6.8 0 5.14779" scale="0.77 1 2.11" static="true" trigger="true" collisionMask="15736832" nodeId="33" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="bunkerSiloArea" translation="30.75 0 -5" nodeId="34">
+            <TransformGroup name="start" nodeId="35"/>
+            <TransformGroup name="width" translation="0 0 20.225" nodeId="36"/>
+            <TransformGroup name="height" translation="-47.9 0 0" nodeId="37"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape shapeId="2" name="Collision" translation="-5 4 -30" static="true" collisionMask="524543" nodeId="38" materialIds="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="visual" clipDistance="800" nodeId="39">
+        <Shape shapeId="3" name="SiloWall" translation="-5 4 -30" nodeId="40" materialIds="14" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="SiloExtra" translation="-5 4 -30" nodeId="41" materialIds="11" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="lantern" translation="0 0 3.875" nodeId="42">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="43">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="44" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="45" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="46" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="47" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="48">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="49" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="50" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="51" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="52" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="0 0 41.88" nodeId="53">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="54">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="55" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="56" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="57" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="58" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="59">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="60" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="61" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="62" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="63" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="0.695 0 22.88" nodeId="64">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="65">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="66" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="67" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="68" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="69" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="70">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="71" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="72" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="73" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="74" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="20.23 0 3.875" nodeId="75">
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="76">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="77" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="78" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="79" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="80" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="20.23 0 41.88" nodeId="81">
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="82">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="83" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="84" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="85" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="86" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="20.23 0 22.88" nodeId="87">
+            <TransformGroup name="light" translation="-0.836382 3.95378 0" clipDistance="129" nodeId="88">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="89" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="90" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="91" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="92" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="-19.575 0 3.875" nodeId="93">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="94">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="95" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="96" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="97" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="98" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="-19.575 0 41.88" nodeId="99">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="100">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="101" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="102" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="103" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="104" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="-19.575 0 22.88" nodeId="105">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="106">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="107" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="108" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="109" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="110" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="-10 0 46.44" rotation="0 90 0" nodeId="111">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="112">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="113" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="114" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="115" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="116" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="lantern" translation="10 0 46.44" rotation="0 90 0" nodeId="117">
+            <TransformGroup name="light" translation="0.15 3.95378 0" rotation="0 180 0" clipDistance="129" nodeId="118">
+              <Light name="envLight" translation="-0.006 0.957 0" rotation="-90 -0 0" nodeId="119" type="spot" color="1 0.85 0.85" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="1" range="12" coneAngle="150" dropOff="5">
+                <Shape shapeId="5" name="lightBeam20" translation="-6.83239e-05 0 -0.148141" rotation="0 8.17077 -5.14107e-14" scale="1.05 1 1" clipDistance="100" nodeId="120" materialIds="10" castsShadows="true" receiveShadows="true">
+                  <Shape shapeId="6" name="topDown" translation="3.52429e-14 -3.63798e-14 -1.02318e-14" clipDistance="100" nodeId="121" materialIds="7" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </Light>
+              <Shape shapeId="7" name="coronaWhite" translation="0.004 0.74 2.07173e-07" rotation="90 0 0" clipDistance="129" nodeId="122" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+        </Shape>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="24">
+      <Attribute name="bunkerSiloArea" type="string" value="0>0|1"/>
+      <Attribute name="fermentedFillTypes" type="string" value="grass_windrow grass_windrow silage"/>
+      <Attribute name="fillTypes" type="string" value="grass_windrow dryGrass_windrow chaff"/>
+      <Attribute name="interactionTriggerIndex" type="string" value="0>0|0"/>
+      <Attribute name="onCreate" type="scriptCallback" value="BunkerSilo.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="31">
+      <Attribute name="bunkerSiloArea" type="string" value="0>0|1"/>
+      <Attribute name="fermentedFillTypes" type="string" value="grass_windrow grass_windrow silage"/>
+      <Attribute name="fillTypes" type="string" value="grass_windrow dryGrass_windrow chaff"/>
+      <Attribute name="interactionTriggerIndex" type="string" value="0>0|0"/>
+      <Attribute name="onCreate" type="scriptCallback" value="BunkerSilo.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="38">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="43">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="48">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="54">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="59">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="65">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="70">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="76">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="82">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="88">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="94">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="100">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="106">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="112">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="118">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
