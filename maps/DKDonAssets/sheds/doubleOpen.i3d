@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="models/FarmShed_Roof.png" relativePath="true"/>
+    <File fileId="1" filename="models/SteelRed.png" relativePath="true"/>
+    <File fileId="3" filename="models/Timber.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="phong34" materialId="30" ambientColor="1 1 1" cosPower="20" specularColor="0.188037 0.188037 0.188037">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="phong42" materialId="45" ambientColor="1 1 1" cosPower="20" specularColor="0.205127 0.205127 0.205127">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="templateBuilding_mat" materialId="139" diffuseColor="0.258824 0.258824 0.258824 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="phong32" materialId="218" ambientColor="1 1 1" cosPower="20" specularColor="0.230762 0.230762 0.230762">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="phong32" materialId="444" ambientColor="1 1 1" cosPower="20" specularColor="0.205127 0.205127 0.205127">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="phong46" materialId="408" ambientColor="1 1 1" cosPower="20" specularColor="0.196582 0.196582 0.196582">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="doubleOpen.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="Shed1" translation="369.122 134.9 -807.007" rotation="0 100 0" static="true" clipDistance="1200" nodeId="4841" materialIds="444,45,408,30,218" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="tipCollisions" translation="-11.4948 0 1.0049e-06" rotation="0 180 0" scale="0.68 1 1" static="true" collisionMask="524288" nodeId="4842" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="2" name="tipCollisions" translation="-11.4948 0 11.3701" rotation="0 180 0" scale="0.68 1 1" static="true" collisionMask="524288" nodeId="4843" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="2" name="tipCollisions" translation="-11.4948 0 -11.4422" rotation="0 180 0" scale="0.68 1 1" static="true" collisionMask="524288" nodeId="4844" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="2" name="tipCollisions" translation="12.5571 0 -11.8017" rotation="0 90 0" scale="0.66 1 1" static="true" collisionMask="524288" nodeId="4845" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="4842">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="4843">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="4844">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="4845">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
