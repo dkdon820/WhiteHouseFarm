@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+    </Asset>
+    <Files>
+        <File fileId="5" filename="Divers/corentin/Hangar/Ao1.dds" relativePath="true"/>
+        <File fileId="4" filename="Divers/corentin/Hangar/Ao2.dds" relativePath="true"/>
+        <File fileId="3" filename="Divers/corentin/Hangar/Ao3.dds" relativePath="true"/>
+        <File fileId="1" filename="Divers/corentin/Hangar/Ao4.dds" relativePath="true"/>
+        <File fileId="2" filename="Divers/corentin/Hangar/Ao5.dds" relativePath="true"/>
+    </Files>
+    <Materials>
+        <Material name="lambert6" materialId="6" ambientColor="1 1 1">
+            <Texture fileId="3"/>
+        </Material>
+        <Material name="lambert3" materialId="79" ambientColor="1 1 1">
+            <Texture fileId="5"/>
+        </Material>
+        <Material name="lambert4" materialId="89" ambientColor="1 1 1">
+            <Texture fileId="2"/>
+        </Material>
+        <Material name="lambert7" materialId="150" ambientColor="1 1 1">
+            <Texture fileId="1"/>
+        </Material>
+        <Material name="lambert5" materialId="445" ambientColor="1 1 1">
+            <Texture fileId="4"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="hanger01.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <Shape shapeId="1" name="Hangar_Marco_Beusch" translation="199.997 138.287 62.43" rotation="0 -90 0" static="true" clipDistance="450" nodeId="22737" materialIds="150,89,6,445,79" castsShadows="true" receiveShadows="true"/>
+    </Scene>
+</i3D>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Forstmap" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="shaders/buildingShaderUS.xml" relativePath="true"/>
+    <File fileId="4" filename="shared/default_cube.dds" relativePath="true"/>
+    <File fileId="1" filename="textures/Holzlagerplatz_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="textures/Holzlagerplatz_normal.dds" relativePath="true"/>
+    <File fileId="3" filename="textures/Holzlagerplatz_specularl.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lagerplatzHolz" materialId="7" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1" customShaderId="5">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Reflectionmap fileId="4" lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="cube" scaling="1" refractiveIndex="1" bumpScale="0.5" shapesObjectMask="4294967295" lightsObjectMask="4294967295"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="holzlagerplatz.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="Holzlagerplatz" static="true" clipDistance="300" nodeId="10" materialIds="7" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

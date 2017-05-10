@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="dkAssets/shed01/buildingShaderUS.xml" relativePath="true"/>
+    <File fileId="1" filename="dkAssets/shed01/textures/sheds.dds" relativePath="true"/>
+    <File fileId="2" filename="dkAssets/shed01/textures/sheds_normal.dds" relativePath="true"/>
+    <File fileId="3" filename="dkAssets/shed01/textures/sheds_specular.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="UnnamedMaterial" materialId="10" diffuseColor="1 1 1 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="sheds_mat" materialId="286" ambientColor="1 1 1" cosPower="255" specularColor="1 1 1" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="FuelShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="StoreShed25x18" translation="324.511 144.658 -266.755" rotation="179.382 44.7305 179.123" static="true" clipDistance="400" nodeId="33609" materialIds="286" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="tipCollision" scale="0.5 4 18" static="true" collisionMask="524288" nodeId="33610" materialIds="10" nonRenderable="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="tipCollision" translation="-12.2989 0 -8.8809" scale="25 4 0.5" static="true" collisionMask="524288" nodeId="33611" materialIds="10" nonRenderable="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="tipCollision" translation="-12.2989 0 8.84579" scale="25 4 0.5" static="true" collisionMask="524288" nodeId="33612" materialIds="10" nonRenderable="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="tipCollision" translation="-24.6733 0 5.97434" scale="0.5 4 6" static="true" collisionMask="524288" nodeId="33613" materialIds="10" nonRenderable="true" distanceBlending="false"/>
+      <Shape shapeId="2" name="tipCollision" translation="-24.6733 0 -5.92705" scale="0.5 4 6" static="true" collisionMask="524288" nodeId="33614" materialIds="10" nonRenderable="true" distanceBlending="false"/>
+    </Shape>
+  </Scene>
+
+</i3D>

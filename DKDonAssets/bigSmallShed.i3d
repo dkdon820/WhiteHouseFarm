@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="Divers/stockage/Ao1.dds" relativePath="true"/>
+    <File fileId="2" filename="Divers/stockage/Ao2.dds" relativePath="true"/>
+    <File fileId="1" filename="Divers/stockage/Ao3.dds" relativePath="true"/>
+    <File fileId="4" filename="Divers/stockage/Ao4.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert4" materialId="434" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="lambert5" materialId="494" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="lambert7" materialId="511" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="lambert9" materialId="98" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bigSmallShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="pCube39" translation="460.769 116.072 -279.265" rotation="5.15692e-06 -76.023 -3.23039e-05" scale="1.42621 1.37926 1.84829" static="true" clipDistance="450" nodeId="20695" materialIds="511,494,434,98" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

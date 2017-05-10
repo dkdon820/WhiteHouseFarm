@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/Barn_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/Concrete_3.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="templateBuilding_mat" materialId="139" diffuseColor="0.258824 0.258824 0.258824 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="03 - Default" materialId="402" ambientColor="0.85 0.85 0.85" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="02 - Default" materialId="455" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="addon.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="addon" translation="414.878 137.674 -763.786" rotation="0 180 0" scale="1 0.9 1.2" static="true" clipDistance="500" nodeId="4912" materialIds="455" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="fywall05" translation="-6.51221 1.9537 -2.58298" rotation="90 -90 90" scale="0.95 1 0.897" static="true" clipDistance="10000" nodeId="4913" materialIds="402" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="fywall05" translation="0.0315457 1.9537 -2.58298" rotation="90 -90 90" scale="0.95 1 0.897" static="true" clipDistance="10000" nodeId="4914" materialIds="402" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="fywall05" translation="-0.0947427 1.9537 -2.62528" rotation="-2.57422e-06 0 -180" scale="1 1 1.099" static="true" clipDistance="10000" nodeId="4915" materialIds="402" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="tipCollisions" translation="-0.0911349 -2.11114e-09 -2.94244" rotation="-1.61087e-06 90 4.17228e-07" scale="0.235 1 1.2" static="true" collisionMask="524288" nodeId="4916" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="3" name="tipCollisions" translation="6.72247 5.87664e-08 -2.56191" rotation="-1.61087e-06 0 4.17228e-07" scale="0.375 1 1" static="true" collisionMask="524288" nodeId="4917" materialIds="139" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="4916">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="4917">
+      <Attribute name="collisionHeight" type="float" value="4"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

@@ -85,6 +85,8 @@ J'espère que vous aimez tous cette carte. -Oxygendavid.]]>
     <extraSourceFiles>
         <sourceFile filename="maps/scripts/AnimalPedestrian.lua" />
         <sourceFile filename="maps/scripts/ShipFS17.lua" />
+		<sourceFile filename="maps/scripts/ChangedFunctions.lua" />
+        <sourceFile filename="maps/scripts/trafficManager.lua" />
     </extraSourceFiles>
 
 

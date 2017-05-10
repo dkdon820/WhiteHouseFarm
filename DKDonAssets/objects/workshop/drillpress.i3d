@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Sample Mod Map 1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="benchDrill_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="benchDrill_normal.png" relativePath="true"/>
+    <File fileId="3" filename="benchDrill_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="benchDrill_mat" materialId="32" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="drillpress.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="benchDrill" translation="-141.238 0 143.841" rotation="0 6.49251 0" static="true" clipDistance="77" nodeId="588" materialIds="32" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

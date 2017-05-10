@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/oilStain3_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/oilStain_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="oilStain3_mat" materialId="15" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1" alphaBlending="true">
+      <Texture fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="oilSpill.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="oilStain3" translation="384.153 146.967 -215.114" rotation="0 45 0" scale="3 3 3" clipDistance="1200" nodeId="2879" materialIds="15" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

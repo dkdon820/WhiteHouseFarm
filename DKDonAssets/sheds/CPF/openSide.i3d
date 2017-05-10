@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/FarmShed_Roof.png" relativePath="true"/>
+    <File fileId="2" filename="models/Farm_Sheds.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="16 - Default" materialId="14" ambientColor="0.85 0.85 0.85">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="15 - Default" materialId="244" ambientColor="0.85 0.85 0.85">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="openSide.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="Shed3" translation="760.196 120.971 -442.48" rotation="7.15998e-06 87.1808 7.15049e-06" scale="0.8 0.9 1" static="true" clipDistance="250" nodeId="4645" materialIds="14,244" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

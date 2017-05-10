@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<prefabDesc descVersion="1">
+    <author>kingkalle - Team LTW</author>
+    <version>1.0.0.0</version>
+	<title>
+        <en>BGA-Silo</en>
+		<de>BGA-Silo</de>
+		<fr>BGA-Silo</fr>
+    </title>
+	<description>
+        <en>BGA-Silo
+Capacity: approx. 3,49 million litre</en>
+        <de>BGA-Silo
+Kapazität: ca. 3,49mio Liter</de>
+        <fr>BGA-Silo
+Capacity: approx. 3,49 million litre</fr>
+    </description>
+	<categories>
+        <category>Building</category>
+        <category>Static</category>
+    </categories>
+	<prefabs>
+		<prefab name="BGA-Silo" i3dFilename="BGASilo.i3d" />
+    </prefabs>
+</prefabDesc>

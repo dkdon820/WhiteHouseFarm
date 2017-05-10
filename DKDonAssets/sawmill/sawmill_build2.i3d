@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/sawmillFloor_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/sawmillFloor_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/sawmillFloor_specular.png" relativePath="true"/>
+    <File fileId="4" filename="models/sawmill_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/sawmill_normal.png" relativePath="true"/>
+    <File fileId="6" filename="models/sawmill_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="sawmillFloor_mat" materialId="204" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="sawmill_mat" materialId="206" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="sawmill_build2.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="sawmill02Floor" translation="720.145 120.89 -480.422" rotation="-0.0554815 0.483031 0.292046" static="true" clipDistance="1200" nodeId="4228" materialIds="204" castsShadows="true" receiveShadows="true">
+      <TransformGroup name="sawmill02" translation="0 0.1 0" clipDistance="250" nodeId="4229" lodDistance="0 80">
+        <Shape shapeId="2" name="sawmill02_lod0" static="true" clipDistance="1200" nodeId="4230" materialIds="206" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="sawmill02_lod1" clipDistance="1200" nodeId="4231" materialIds="206" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

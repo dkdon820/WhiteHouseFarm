@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="models/farmSiloSystemAlpha_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/farmSiloSystemAlpha_normal.png" relativePath="true"/>
+    <File fileId="6" filename="models/farmSiloSystemAlpha_specular.png" relativePath="true"/>
+    <File fileId="1" filename="models/farmSiloSystem_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/farmSiloSystem_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/farmSiloSystem_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="farmSiloSystemAlpha_mat" materialId="147" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="farmSiloSystem_mat" materialId="146" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="slioSmall.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="farmSilo" translation="630.978 120.918 -363.509" scale="1 0.9 1" clipDistance="1200" nodeId="4150" lodDistance="0 100">
+      <Shape shapeId="1" name="farmSilo_lod0" translation="-5 0 0" static="true" nodeId="4151" materialIds="146" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="farmSiloAlpha" translation="5 0 0" static="true" nodeId="4152" materialIds="147" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="3" name="farmSilo_lod1" nodeId="4153" materialIds="146" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

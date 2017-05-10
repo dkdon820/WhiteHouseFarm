@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/texture0.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="ID11" materialId="445" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="tank.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name=".031" rotation="0 -0.0419063 3.07495e-16" static="true" collisionMask="65535" nodeId="2825" materialIds="445" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>
