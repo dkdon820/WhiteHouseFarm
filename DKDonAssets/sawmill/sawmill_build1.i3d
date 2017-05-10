@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="7" filename="models/saw_diffuse.png" relativePath="true"/>
+    <File fileId="8" filename="models/saw_normal.png" relativePath="true"/>
+    <File fileId="9" filename="models/saw_specular.png" relativePath="true"/>
+    <File fileId="1" filename="models/sawmillFloor_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/sawmillFloor_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/sawmillFloor_specular.png" relativePath="true"/>
+    <File fileId="4" filename="models/sawmill_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/sawmill_normal.png" relativePath="true"/>
+    <File fileId="6" filename="models/sawmill_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="saw_mat" materialId="88" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="sawmillFloor_mat" materialId="204" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="sawmill_mat" materialId="206" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="sawmill_build1.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="sawmill01Floor" translation="715.53 121.155 -434.589" rotation="180 85.6356 180" static="true" clipDistance="1200" nodeId="4217" materialIds="204" castsShadows="true" receiveShadows="true">
+      <TransformGroup name="sawmill01" translation="0 0.2 0" clipDistance="1200" nodeId="4218" lodDistance="0 80 200">
+        <Shape shapeId="2" name="sawmill01_lod0" static="true" clipDistance="1200" nodeId="4219" materialIds="206" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="sawmill01_lod1" clipDistance="1200" nodeId="4220" materialIds="206" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="4" name="sawmill01_lod2" clipDistance="1200" nodeId="4221" materialIds="206" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="sawmillRollers" translation="0 0.2 0" clipDistance="250" nodeId="4222" lodDistance="0 50">
+        <Shape shapeId="5" name="sawmillRollers_lod0" static="true" clipDistance="250" nodeId="4223" materialIds="206" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="sawmillRollers_lod1" rotation="-1e-05 0 0" clipDistance="250" nodeId="4224" materialIds="206" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="saw" translation="-7.2 0.2 -0.45" clipDistance="1200" nodeId="4225" lodDistance="0 50">
+        <Shape shapeId="7" name="saw_lod0" rotation="0 -1e-05 0" static="true" clipDistance="1200" nodeId="4226" materialIds="88" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="saw_lod1" rotation="0 -1e-05 0" clipDistance="1200" nodeId="4227" materialIds="88" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

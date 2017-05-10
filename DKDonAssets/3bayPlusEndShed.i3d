@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="New/Kiwii/Hangar_Matos_Atelier/Ao_Bardage.dds" relativePath="true"/>
+    <File fileId="1" filename="New/Kiwii/Hangar_Matos_Atelier/Ao_Charpente.dds" relativePath="true"/>
+    <File fileId="2" filename="New/Kiwii/Hangar_Matos_Atelier/Ao_Sol.dds" relativePath="true"/>
+    <File fileId="3" filename="New/Kiwii/Hangar_Matos_Atelier/Ao_Toit.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Ao_Bardage" materialId="10" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="Ao_Toit" materialId="22" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="Ao_Charpente" materialId="26" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="Ao_Sol" materialId="183" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="3bayPlusEndShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="hangar" translation="574.799 130.721 -138.91" rotation="4.73734e-06 15.3377 1.08737e-06" nodeId="23085">
+      <Shape shapeId="1" name="polySurface44" rotation="9.33467e-06 -0 0" static="true" clipDistance="300" nodeId="23086" materialIds="26" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="polySurface41" rotation="9.33467e-06 -0 0" static="true" clipDistance="300" nodeId="23087" materialIds="183" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="polySurface39" rotation="9.33467e-06 -0 0" static="true" clipDistance="300" nodeId="23088" materialIds="22" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="polySurface26" rotation="9.33467e-06 -0 0" static="true" clipDistance="300" nodeId="23089" materialIds="10" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

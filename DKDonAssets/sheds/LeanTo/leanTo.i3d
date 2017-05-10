@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="leanTo" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="../textures/shed1_spec.dds" relativePath="true"/>
+    <File fileId="1" filename="../textures/shed1rust_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="../textures/shed1rust_norm.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Shed1" materialId="6" ambientColor="0.7 0.7 0.7" cosPower="20" specularColor="0.6 0.6 0.6">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="leanTo.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="LeanTo" scale="0.393701 0.393701 0.393701" static="true" nodeId="14">
+      <Shape shapeId="1" name="Structure" static="true" nodeId="15" materialIds="6" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="Gutter" static="true" nodeId="16">
+          <Shape shapeId="2" name="front_downspout" static="true" nodeId="17" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="3" name="front_gutter" static="true" nodeId="18" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="_flashing" static="true" nodeId="19">
+          <Shape shapeId="4" name="flashing_left" static="true" nodeId="20" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="5" name="flashing_right" static="true" nodeId="21" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <Shape shapeId="6" name="back_support" static="true" nodeId="22" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

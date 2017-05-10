@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Shed1B" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="../shaders/emissiveLightsShader.xml" relativePath="true"/>
+    <File fileId="3" filename="../textures/shed1_spec.dds" relativePath="true"/>
+    <File fileId="1" filename="../textures/shed1rust_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="../textures/shed1rust_norm.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Shed1" materialId="6" ambientColor="0.7 0.7 0.7" cosPower="20" specularColor="0.6 0.6 0.6">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="light" materialId="8" ambientColor="1 1 1" alphaBlending="true" customShaderId="4" customShaderVariation="STATIC_LIGHT">
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="Shed1B.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Shed1B" rotation="90 0 0" scale="0.393701 0.393701 0.393701" static="true" nodeId="25">
+      <Shape shapeId="1" name="Structure" static="true" nodeId="26" materialIds="6" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="lighting" static="true" nodeId="27">
+          <Light name="pointlight1" translation="-3.03292 0 -13.3665" clipDistance="500" nodeId="28" type="point" color="1 1 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="7"/>
+          <Light name="pointlight2" translation="-3.03292 15.0037 -13.3665" clipDistance="500" nodeId="29" type="point" color="1 1 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="7"/>
+          <Light name="pointlight3" translation="-3.03292 -15.5879 -13.3665" clipDistance="500" nodeId="30" type="point" color="1 1 0.9" emitDiffuse="true" emitSpecular="true" decayRate="4" range="7"/>
+          <Shape shapeId="2" name="light_lit" clipDistance="150" nodeId="31" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="_flashing" static="true" nodeId="32">
+          <Shape shapeId="3" name="side_flashing_l" static="true" nodeId="33" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="4" name="side_flashing_r" static="true" nodeId="34" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="5" name="top_flashing" static="true" nodeId="35" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="back" static="true" nodeId="36">
+          <Shape shapeId="6" name="back_cladding" static="true" nodeId="37" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="7" name="back_supports" static="true" nodeId="38" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="8" name="back_wall" static="true" nodeId="39" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="end" static="true" nodeId="40">
+          <Shape shapeId="9" name="end_frame" static="true" nodeId="41" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="10" name="end_wall" static="true" nodeId="42" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="gutters" static="true" nodeId="43">
+          <Shape shapeId="11" name="back_downspout" static="true" nodeId="44" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="12" name="back_gutter" static="true" nodeId="45" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="13" name="front_downspout" static="true" nodeId="46" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="14" name="front_gutter" static="true" nodeId="47" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <Shape shapeId="15" name="light_casing" static="true" nodeId="48" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="27">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

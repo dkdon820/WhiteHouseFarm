@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="kaercherHDS918-4M" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="texturen/buildingShaderUS.xml" relativePath="true"/>
+    <File fileId="3" filename="texturen/diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="texturen/kaercher_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="texturen/light02_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="acmat_1" materialId="7" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="lambert1" materialId="10" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1" customShaderId="6" customShaderVariation="FORCE_GLOSS_SECONDUV">
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="6" diffuseColor="1 1 1 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="acmat_1" materialId="11" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="neonlit_mat" materialId="12" diffuseColor="1 1 1 1" ambientColor="1 1 1">
+      <Emissivemap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="washer.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="kaercher" translation="0 0.124901 -0.38" static="true" clipDistance="300" nodeId="23" materialIds="6" nonRenderable="true" distanceBlending="false">
+      <TransformGroup name="switchableLights" translation="1.63716 1.92953 0.236257" rotation="-180 -90 -180" nodeId="24">
+        <TransformGroup name="light" translation="2.19476 5.71672 0.099772" rotation="0 90 0" visibility="false" nodeId="25">
+          <Shape shapeId="2" name="emissive" translation="-1.27348e-09 -0.00421694 -8.34985e-17" nodeId="26" materialIds="12" castsShadows="true" receiveShadows="true"/>
+          <Light name="pointLight" translation="0 -0.297076 9.11495e-09" rotation="-90 0 0" nodeId="27" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="20"/>
+        </TransformGroup>
+        <TransformGroup name="light" translation="7.46368 5.71672 0.0997722" rotation="0 90 0" visibility="false" nodeId="28">
+          <Shape shapeId="2" name="emissive" translation="-1.27348e-09 -0.00421694 -8.34985e-17" nodeId="29" materialIds="12" castsShadows="true" receiveShadows="true"/>
+          <Light name="pointLight" translation="0 -0.297076 9.11495e-09" rotation="-90 0 0" nodeId="30" type="point" color="0.9 0.9 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.001" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="256" shadowFarDistance="80" shadowExtrusionDistance="200" shadowPerspective="false" decayRate="4" range="20"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape shapeId="3" name="Station2" translation="1.53 0.0185025 4.374" static="true" clipDistance="300" nodeId="31" materialIds="11" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="lancePosition" translation="-1.03418 1.08647 -3.45957" rotation="-147.753 -0.145 -179.163" nodeId="32">
+          <TransformGroup name="lanceRot" translation="6.78901e-16 1.92735e-15 4.9738e-16" rotation="0 0 -1.77043e-16" nodeId="33">
+            <TransformGroup name="effects" translation="0 -4.26326e-16 8.52651e-16" nodeId="34">
+              <Shape shapeId="4" name="effectMesh" translation="-7.10543e-17 0.0658604 1.05049" rotation="0 0 -10" clipDistance="100" nodeId="35" materialIds="8" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="dustEmitShape" clipDistance="300" nodeId="36" materialIds="8" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            </TransformGroup>
+            <Shape shapeId="6" name="lanceHP" nodeId="37" materialIds="7" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="leftHandRef" translation="0.0126875 0.0721462 0.262725" rotation="1.99036e-16 0 -90" nodeId="38"/>
+              <TransformGroup name="raycast" translation="0.000599216 0.0652633 1.05075" rotation="-180 7.23283 -90" nodeId="39"/>
+            </Shape>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="exhaust" translation="-1.5483 1.12299 -3.99475" rotation="-7.15625e-15 0 -1.75179e-15" nodeId="40"/>
+        <Shape shapeId="7" name="Light" translation="0 -0.397977 7.18767" scale="1.365 1.2 1.365" static="true" clipDistance="300" nodeId="41" materialIds="11" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="8" name="add" nodeId="42" materialIds="11" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </Shape>
+      <TransformGroup name="positionRef1" translation="0 -5.55112e-19 0.605382" nodeId="43"/>
+      <TransformGroup name="positionRef2" translation="-0.3501 0.00164895 0.586643" nodeId="44"/>
+      <TransformGroup name="positionRef3" translation="0.350147 0.00168098 0.586639" rotation="0.00262112 -89.9997 0" nodeId="45"/>
+      <TransformGroup name="clearArea" translation="-2.00272e-07 -0.00445105 0.380243" nodeId="46">
+        <TransformGroup name="start" translation="-12.629 -0.896 0.825" nodeId="47"/>
+        <TransformGroup name="width" translation="15.799 -0.896 0.825" nodeId="48"/>
+        <TransformGroup name="height" translation="-12.629 -0.896 9.8087" nodeId="49"/>
+      </TransformGroup>
+      <Shape shapeId="9" name="tipOcclusion1" translation="-2.86061 -0.315248 -0.0377694" static="true" collisionMask="524288" nodeId="50" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="9" name="tipOcclusion2" translation="-2.86061 -0.315248 10.4554" static="true" collisionMask="524288" nodeId="51" materialIds="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="25">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="28">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="50">
+      <Attribute name="collisionHight" type="float" value="3"/>
+    </UserAttribute>
+    <UserAttribute nodeId="51">
+      <Attribute name="collisionHight" type="float" value="3"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
