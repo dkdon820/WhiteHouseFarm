@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="models/natural/trees/treeBranches_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="models/objects/woodwork/chickenCoop_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/objects/woodwork/chickenCoop_normal.png" relativePath="true"/>
+    <File fileId="4" filename="shaders/windShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="chickenCoop_mat" materialId="133" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+    <Material name="treeBranches_mat" materialId="193" ambientColor="1 1 1" customShaderId="4">
+      <Texture fileId="3"/>
+      <CustomParameter name="directionAndFrequency" value="0.06 0 0 1.2"/>
+      <CustomParameter name="speed" value="1 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="roundPlanterFlowers.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="planterBoxRound" translation="498.5 155.498 247" rotation="0 90 0" static="true" clipDistance="150" nodeId="4024" materialIds="133" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="flowersLavender" translation="-0.217911 0.623734 -0.856445" rotation="0 1247.3 0" clipDistance="40" nodeId="4025" materialIds="193" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="flowersLavender" translation="0.327332 0.625748 0.801514" rotation="0 -7.1289 0" clipDistance="40" nodeId="4026" materialIds="193" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="flowersLavender" translation="-1.11702 0.604843 0.170624" rotation="0 81.2636 0" clipDistance="40" nodeId="4027" materialIds="193" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="flowersLavender" translation="0.968781 0.618591 -0.137787" rotation="180 -82.5139 -180" clipDistance="40" nodeId="4028" materialIds="193" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="flowersLavender" translation="-0.0670624 0.646835 -0.0448914" rotation="180 -82.5139 -180" scale="1.25 1.25 1.25" clipDistance="50" nodeId="4029" materialIds="193" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

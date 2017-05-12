@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/objects/woodwork/chickenCoop_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/objects/woodwork/chickenCoop_normal.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="chickenCoop_mat" materialId="133" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="squarePlanterEmpty.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="planterBoxSquare" translation="503 155.498 251" static="true" clipDistance="150" nodeId="4035" materialIds="133" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

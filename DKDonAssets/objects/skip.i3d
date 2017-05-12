@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="models/decals/debrisStone/debrisStone_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="models/objects/skip/skip_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="skip_mat" materialId="143" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="debrisStone_mat" materialId="217" ambientColor="1 1 1" cosPower="20" specularColor="0.2 0.2 0.2">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="skip.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="skip" translation="534.5 155.5 160.5" rotation="0 90 0" static="true" clipDistance="200" nodeId="4090" materialIds="143" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="debrisStone" translation="3.20034e-09 0.148921 0.07322" rotation="0 90 0" clipDistance="100" nodeId="4091" materialIds="217" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

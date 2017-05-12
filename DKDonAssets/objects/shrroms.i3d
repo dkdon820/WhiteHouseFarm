@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/natural/shrooms/shrooms_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="shroomsGlowy_mat" materialId="208" ambientColor="1 1 1" cosPower="20" specularColor="0.25 0.25 0.25">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="shrroms.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="shrooms02" translation="198.002 155.001 383.665" rotation="0 35 0" clipDistance="50" nodeId="7972" materialIds="208" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

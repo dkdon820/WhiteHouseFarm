@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <careerVehicles>
+    <vehicle id="11" filename="data/vehicles/steerable/jcb/jcbFastrac8000.xml" isAbsolute="true" age="0" price="225000" propertyState="1" operatingTime="274.63752497482"  fuelFillLevel="546.57539004222" cruiseControl="73"  attacherJointComboDir="-1" dirtAmount="0" ssLastRepairDay="1" ssYesterdayOperatingTime="33.260208129883" ssCumulativeDirt="128357.30333683" >
+        <component1 position="653.56182861328 158.88195800781 585.25646972656" rotation="-2.5708792209625 -1.2748254537582 2.5984122753143" />
+        <configuration name="rimColor" id="1" />
+        <configuration name="wheel" id="1" />
+        <configuration name="motor" id="1" />
+        <boughtConfiguration name="rimColor" id="1" />
+        <boughtConfiguration name="wheel" id="1" />
+        <boughtConfiguration name="motor" id="1" />
+    </vehicle>
     <vehicle id="1" filename="data/vehicles/steerable/lizard/lizardPickupRodeo.xml" isAbsolute="true" age="96" price="22000" propertyState="1" operatingTime="19407.710510193"  tourId="tourPickup" fuelFillLevel="59.521696653572" cruiseControl="123"  attacherJointComboDir="-1" dirtAmount="0.54711441033489" fourWheel="false" diffLockFront="false" diffLockBack="false" GPSstoreInv=""  ssLastRepairDay="1" ssYesterdayOperatingTime="19147028" ssCumulativeDirt="198921.01818681" >
         <component1 position="-949.43640136719 112.95545196533 549.57220458984" rotation="3.1331169605255 -0.48407274484634 3.1415917873383" />
         <configuration name="baseColor" id="1" />

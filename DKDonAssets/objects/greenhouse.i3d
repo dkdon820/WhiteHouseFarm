@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="custom/woodfield/flowers_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="custom/woodfield/greenhouseWindows_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="custom/woodfield/greenhouse_diffuse.png" relativePath="true"/>
+    <File fileId="4" filename="shaders/windShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="greenhouse_mat" materialId="341" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="greenhouseWindows_mat" materialId="342" ambientColor="1 1 1" cosPower="500" specularColor="0.007843 0.007843 0.011765" alphaBlending="true">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="flowers_mat" materialId="629" ambientColor="1 1 1" customShaderId="4">
+      <Texture fileId="3"/>
+      <CustomParameter name="directionAndFrequency" value="0.06 0 0 1.2"/>
+      <CustomParameter name="speed" value="1 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="greenhouse.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="greenhouse" translation="-713.054 101.498 -73.9817" scale="0.5 0.7 0.3" static="true" clipDistance="500" nodeId="8850" materialIds="341" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="glassPaneE" static="true" clipDistance="300" nodeId="8851" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="glassPaneN" static="true" clipDistance="300" nodeId="8852" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="glassPaneS" static="true" clipDistance="300" nodeId="8853" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="5" name="glassPaneW" static="true" clipDistance="300" nodeId="8854" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="6" name="glassRoofE" static="true" clipDistance="300" nodeId="8855" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="glassRoofW" static="true" clipDistance="300" nodeId="8856" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="8" name="glassRoof" static="true" clipDistance="300" nodeId="8857" materialIds="342" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="9" name="greenhousePlanter" translation="0 0 7.8" static="true" nodeId="8858" materialIds="341" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="flowersLavender" translation="2.1 1.1 0" clipDistance="50" nodeId="8859" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="1.25 1.1 0" rotation="0 90 0" clipDistance="50" nodeId="8860" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="0.45 1.1 0" rotation="0 45 0" clipDistance="50" nodeId="8861" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-2.1 1.1 -0" rotation="0 120 0" clipDistance="50" nodeId="8862" materialIds="629" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="9" name="greenhousePlanter" translation="0 0 4" static="true" nodeId="8863" materialIds="341" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="flowersLavender" translation="2.1 1.1 0" clipDistance="50" nodeId="8864" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="1.25 1.1 0" rotation="0 90 0" clipDistance="50" nodeId="8865" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="0.45 1.1 0" rotation="0 45 0" clipDistance="50" nodeId="8866" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-0.45 1.1 0" rotation="0 135 0" clipDistance="50" nodeId="8867" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-1.4 1.1 -0" rotation="0 180 0" clipDistance="50" nodeId="8868" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-2.1 1.1 -0" rotation="0 120 0" clipDistance="50" nodeId="8869" materialIds="629" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="9" name="greenhousePlanter" static="true" nodeId="8870" materialIds="341" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="flowersLavender" translation="1.25 1.1 0" rotation="0 90 0" clipDistance="50" nodeId="8871" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-0.45 1.1 0" rotation="0 135 0" clipDistance="50" nodeId="8872" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-1.4 1.1 -0" rotation="0 180 0" clipDistance="50" nodeId="8873" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-2.1 1.1 -0" rotation="0 120 0" clipDistance="50" nodeId="8874" materialIds="629" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="9" name="greenhousePlanter" translation="0 0 -4" static="true" nodeId="8875" materialIds="341" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="flowersLavender" translation="2.1 1.1 0" clipDistance="50" nodeId="8876" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="1.15381 1.1 0" rotation="0 90 0" clipDistance="50" nodeId="8877" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-0.220915 1.1 -0" rotation="0 45 0" clipDistance="50" nodeId="8878" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-2.1 1.1 -0" rotation="0 120 0" clipDistance="50" nodeId="8879" materialIds="629" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="9" name="greenhousePlanter" translation="0 0 -7.8" static="true" nodeId="8880" materialIds="341" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="10" name="flowersLavender" translation="2.1 1.1 0" clipDistance="50" nodeId="8881" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="1.25 1.1 0" rotation="0 90 0" clipDistance="50" nodeId="8882" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="0.45 1.1 0" rotation="0 45 0" clipDistance="50" nodeId="8883" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-0.45 1.1 0" rotation="0 135 0" clipDistance="50" nodeId="8884" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-1.4 1.1 -0" rotation="0 180 0" clipDistance="50" nodeId="8885" materialIds="629" receiveShadows="true"/>
+        <Shape shapeId="10" name="flowersLavender" translation="-2.1 1.1 -0" rotation="0 120 0" clipDistance="50" nodeId="8886" materialIds="629" receiveShadows="true"/>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

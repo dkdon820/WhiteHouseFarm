@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="textureBuildings/Dachziegel.dds" relativePath="true"/>
+    <File fileId="4" filename="textureBuildings/Mauerwerk.dds" relativePath="true"/>
+    <File fileId="5" filename="textureBuildings/Mauerwerk_normal.dds" relativePath="true"/>
+    <File fileId="3" filename="textureBuildings/Planken.dds" relativePath="true"/>
+    <File fileId="7" filename="textureBuildings/Stall_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="textureBuildings/holz.dds" relativePath="true"/>
+    <File fileId="6" filename="textureBuildings/sichtbeton.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="textur1" materialId="74" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="02 - Default" materialId="121" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="default" materialId="215" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="04 - Default" materialId="399" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="03 - Default" materialId="733" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="05 - Default" materialId="749" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="rustyShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="Halle" translation="-26.7577 9.64298 23.9131" rotation="0 44.4432 -3.7635e-11" scale="1 1.2 1" static="true" clipDistance="1000" nodeId="27189" materialIds="215,121,399,733,749" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="Tor_links" translation="-5.62029 4.03 -1.87834" rotation="-0.171265 -12.9084 -179.956" static="true" nodeId="27190" materialIds="74" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="Tor_links" translation="-5.77089 -0.95036 -6.85982" rotation="-180 15.9935 -180" static="true" nodeId="27191" materialIds="74" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

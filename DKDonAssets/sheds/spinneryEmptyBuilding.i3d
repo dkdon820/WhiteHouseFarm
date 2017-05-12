@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="9" filename="models/buildings/spinnery/spinneryAlpha_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="models/buildings/spinnery/spinneryHut_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/buildings/spinnery/spinneryHut_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/buildings/spinnery/spinneryHut_specular.png" relativePath="true"/>
+    <File fileId="4" filename="models/objects/classicStreetlight/classicStreetlight_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/objects/classicStreetlight/classicStreetlight_normal.png" relativePath="true"/>
+    <File fileId="6" filename="models/objects/classicStreetlight/classicStreetlight_specular.png" relativePath="true"/>
+    <File fileId="7" filename="models/objects/classicStreetlight/corona_yellow_diffuse.png" relativePath="true"/>
+    <File fileId="8" filename="shaders/emissive360BillboardShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="classicStreetlightLit_mat" materialId="107" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+      <Emissivemap fileId="4"/>
+    </Material>
+    <Material name="spinneryHut_mat" materialId="100" ambientColor="1 1 1" cosPower="10" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="classicStreetlight_mat" materialId="221" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="spinneryAlpha_mat" materialId="220" ambientColor="1 1 1" cosPower="10" specularColor="0.8 0.8 0.8">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="coronaYellow_mat" materialId="238" ambientColor="1 1 1" alphaBlending="true" customShaderId="8">
+      <Emissivemap fileId="7"/>
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="spinneryEmptyBuilding.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="spinnery04" translation="294 155 415" rotation="0 180 0" clipDistance="400" nodeId="7920" lodDistance="0 160">
+      <Shape shapeId="1" name="spinnery04_lod0" oc="true" static="true" clipDistance="500" nodeId="7921" materialIds="100" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="classicLanternSideDay" translation="2.5 2.5 5" rotation="0 90 0" static="true" clipDistance="100" nodeId="7922" materialIds="221" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="classicLanternSideNight" visibility="false" clipDistance="100" nodeId="7923" materialIds="107" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="streetlightCorona" translation="-0.5 0.4 0" clipDistance="400" nodeId="7924" materialIds="238"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="2" name="classicLanternSideDay" translation="-4.5 2.5 5" rotation="0 90 0" static="true" clipDistance="100" nodeId="7925" materialIds="221" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="classicLanternSideNight" visibility="false" clipDistance="100" nodeId="7926" materialIds="107" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="streetlightCorona" translation="-0.5 0.4 0" clipDistance="400" nodeId="7927" materialIds="238"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="2" name="classicLanternSideDay" translation="-4.5 2.5 -5" rotation="0 270 0" static="true" clipDistance="100" nodeId="7928" materialIds="221" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="classicLanternSideNight" visibility="false" clipDistance="100" nodeId="7929" materialIds="107" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="streetlightCorona" translation="-0.5 0.4 0" clipDistance="400" nodeId="7930" materialIds="238"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="2" name="classicLanternSideDay" translation="2.5 2.5 -5" rotation="0 270 0" static="true" clipDistance="100" nodeId="7931" materialIds="221" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="classicLanternSideNight" visibility="false" clipDistance="100" nodeId="7932" materialIds="107" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="4" name="streetlightCorona" translation="-0.5 0.4 0" clipDistance="400" nodeId="7933" materialIds="238"/>
+          </Shape>
+        </Shape>
+        <Shape shapeId="5" name="spinneryAlpha" translation="10.525 0 0" oc="true" static="true" clipDistance="500" nodeId="7934" materialIds="220" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape shapeId="6" name="spinnery04_lod1" oc="true" clipDistance="400" nodeId="7935" materialIds="100" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="7923">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7924">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7926">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7927">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7929">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7930">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7932">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7933">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

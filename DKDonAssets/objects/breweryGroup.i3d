@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="11" filename="custom/animals/road_diffuse.png" relativePath="true"/>
+    <File fileId="12" filename="custom/animals/road_normal.png" relativePath="true"/>
+    <File fileId="13" filename="custom/animals/road_specular.png" relativePath="true"/>
+    <File fileId="8" filename="custom/brewery/universalSiloAlpha_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="custom/brewery/universalSiloAlpha_normal.png" relativePath="true"/>
+    <File fileId="10" filename="custom/brewery/vegetableBaseLOD_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="custom/brewery/vegetableBase_specular.png" relativePath="true"/>
+    <File fileId="1" filename="custom/decoration/sowingMachine01_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="custom/decoration/sowingMachine01_normal.dds" relativePath="true"/>
+    <File fileId="3" filename="custom/woodfield/vegetableBase_diffuse.png" relativePath="true"/>
+    <File fileId="4" filename="custom/woodfield/vegetableBase_normal.png" relativePath="true"/>
+    <File fileId="6" filename="shaders/buildingShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="universalSiloAlpha_mat" materialId="126" ambientColor="1 1 1">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+    </Material>
+    <Material name="vegetableBaseLOD_mat" materialId="116" ambientColor="1 1 1">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="road_mat" materialId="297" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="lambert1" materialId="228" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+    <Material name="vegetableBase_mat" materialId="667" ambientColor="1 1 1" cosPower="255" specularColor="1 1 1" customShaderId="6" customShaderVariation="FORCE_GLOOSS_SECONDUV">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="breweryGroup.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="Brewery" translation="-1309.14 99.95 941.022" rotation="-180 90 -180" static="true" clipDistance="300" objectMask="65534" nodeId="7922" lodDistance="0 150">
+      <TransformGroup name="LOD0" clipDistance="300" nodeId="7923">
+        <TransformGroup name="gameplay" nodeId="7924">
+          <TransformGroup name="IN" nodeId="7925">
+            <Shape shapeId="1" name="triggerPos" translation="-2.64167 0.41487 5.426" scale="3.5 6 9" static="true" trigger="true" collisionMask="8388608" nodeId="7926" materialIds="228" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <TransformGroup name="triggerStart" translation="0 0 0.3072" nodeId="7927"/>
+              <TransformGroup name="triggerEnd" translation="0 0 -0.255251" nodeId="7928"/>
+              <TransformGroup name="iconPos" translation="9.83258 -0.0608101 5.69792" nodeId="7929"/>
+            </Shape>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="collision" nodeId="7930">
+          <Shape shapeId="2" name="collision0" static="true" nodeId="7931" materialIds="228" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="3" name="collision1" translation="-2.64653 0.278462 5.41164" static="true" nodeId="7932" materialIds="228" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+        <Shape shapeId="4" name="visual" nodeId="7933" materialIds="667" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="5" name="alpha" translation="-2.64294 0.402 5.40616" nodeId="7934" materialIds="126" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </TransformGroup>
+      <Shape shapeId="6" name="LOD1" clipDistance="300" nodeId="7935" materialIds="116" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="7" name="livestockMarketGroundMarkings" translation="-6.00171 0.0500031 48.1335" rotation="180 -5.00896e-06 180" clipDistance="300" nodeId="7936" materialIds="297" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="7926">
+      <Attribute name="index" type="string" value="BREWERY_PIT"/>
+      <Attribute name="mapPositionIndex" type="string" value="2"/>
+      <Attribute name="onCreate" type="scriptCallback" value="TipTrigger.onCreate"/>
+      <Attribute name="useMapConfigXml" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7932">
+      <Attribute name="noTireTracks" type="boolean" value="true"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="custom/animals/buildingDetails_diffuse.png" relativePath="true"/>
+    <File fileId="7" filename="custom/animals/buildingDetails_normal.png" relativePath="true"/>
+    <File fileId="8" filename="custom/animals/buildingDetails_specular.png" relativePath="true"/>
+    <File fileId="9" filename="custom/animals/buildingWindows_diffuse.png" relativePath="true"/>
+    <File fileId="10" filename="custom/animals/buildingWindows_normal.png" relativePath="true"/>
+    <File fileId="11" filename="custom/animals/buildingWindows_specular.png" relativePath="true"/>
+    <File fileId="3" filename="custom/coffee/commercialBuilding03_specular.png" relativePath="true"/>
+    <File fileId="1" filename="custom/coffee/commercialBuildings_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="custom/coffee/commercialBuildings_normal.png" relativePath="true"/>
+    <File fileId="16" filename="custom/coffee/retailSigns2_diffuse.png" relativePath="true"/>
+    <File fileId="17" filename="custom/coffee/retailSigns2_normal.png" relativePath="true"/>
+    <File fileId="18" filename="custom/coffee/retailSigns2_specular.png" relativePath="true"/>
+    <File fileId="14" filename="custom/decoration/sowingMachine01_diffuse.dds" relativePath="true"/>
+    <File fileId="15" filename="custom/decoration/sowingMachine01_normal.dds" relativePath="true"/>
+    <File fileId="4" filename="shaders/buildingShaderUS.xml" relativePath="true"/>
+    <File fileId="13" filename="shaders/emissiveLightsShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="light" materialId="97" ambientColor="1 1 1" emissiveColor="1 1 1 0.894118" alphaBlending="true" customShaderId="13" customShaderVariation="STATIC_LIGHT">
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+    <Material name="lambert1" materialId="228" ambientColor="1 1 1">
+      <Texture fileId="14"/>
+      <Normalmap fileId="15"/>
+    </Material>
+    <Material name="retailSigns2_mat" materialId="534" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="18"/>
+    </Material>
+    <Material name="commercialBuildings3_mat" materialId="566" ambientColor="1 1 1" cosPower="255" specularColor="1 1 1" customShaderId="4" customShaderVariation="FORCE_GLOSS_SECONDUV">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+    <Material name="buildingWindows_mat" materialId="567" ambientColor="1 1 1" cosPower="255" specularColor="1 1 1">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+    </Material>
+    <Material name="buildingDetails_mat" materialId="670" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="coffeeHouse.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="commercialBuilding03" translation="-1361.03 99.9774 917.977" clipDistance="500" nodeId="8069">
+      <Shape shapeId="1" name="vis" translation="-4.00527 0 3.33291" nodeId="8070" materialIds="566" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="addons" translation="9.44138e-07 0 0" static="true" clipDistance="212" nodeId="8071" materialIds="670" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="3" name="windows" translation="9.44138e-07 0 0" nodeId="8072" materialIds="567" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="lighting" visibility="false" nodeId="8073">
+          <Shape shapeId="4" name="lampsLit" translation="9.44138e-07 0 0" clipDistance="150" nodeId="8074" materialIds="97" castsShadows="true" receiveShadows="true"/>
+          <Light name="pointLight22" translation="-0.680101 2.39844 -9.04671" clipDistance="120" nodeId="8075" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight23" translation="0.689478 2.39844 -9.04671" clipDistance="120" nodeId="8076" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight24" translation="-8.02288 3.23123 1.83222" clipDistance="120" nodeId="8077" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight25" translation="-8.03043 3.23123 0.47142" clipDistance="120" nodeId="8078" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight26" translation="8.02781 3.23123 1.83222" clipDistance="120" nodeId="8079" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight27" translation="8.02026 3.23123 0.47142" clipDistance="120" nodeId="8080" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+          <Light name="pointLight28" translation="-1.27187 2.78223 9.29144" clipDistance="120" nodeId="8081" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+        </TransformGroup>
+        <Shape shapeId="5" name="col" translation="9.44138e-07 0 0" visibility="false" static="true" nodeId="8082" materialIds="228" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="6" name="commercialBuilding03Signs04" nodeId="8083" materialIds="534" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="8073">
+      <Attribute name="onCreate" type="scriptCallback" value="Nightlight2.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

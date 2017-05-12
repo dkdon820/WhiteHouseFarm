@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="custom/walkers/Material2.dds" relativePath="true"/>
+    <File fileId="1" filename="custom/walkers/_Beige_2.dds" relativePath="true"/>
+    <File fileId="3" filename="custom/walkers/gruen.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="brewerytank3" materialId="190" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="brewerytank1" materialId="375" ambientColor="0.588 0.588 0.588">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="brewerytank2" materialId="448" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="breweryTank.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="BreweryTank" translation="-1324.85 100 952.985" rotation="0 -15.3383 0" scale="0.7 0.7 0.7" static="true" clipDistance="300" nodeId="7979" materialIds="375,190,448" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

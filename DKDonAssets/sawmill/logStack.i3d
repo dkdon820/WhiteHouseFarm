@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="textureObjects/woodStacks_diffuse.dds" relativePath="true"/>
+    <File fileId="2" filename="textureObjects/woodStacks_normal.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="woodStacks_mat" materialId="644" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="logStack.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="lod_50_woodStack01" translation="-60.651 -0.346954 27.7081" rotation="-180 15.7267 -180" static="true" clipDistance="300" nodeId="27506" lodDistance="0 25">
+      <Shape shapeId="1" name="woodstack01" static="true" nodeId="27507" materialIds="644" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="woodstack01_lod" clipDistance="200" nodeId="27508" materialIds="644" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="27507">
+      <Attribute name="MaxHandle" type="integer" value="24"/>
+    </UserAttribute>
+    <UserAttribute nodeId="27508">
+      <Attribute name="MaxHandle" type="integer" value="31"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

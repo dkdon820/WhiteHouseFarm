@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="models/buildings/farmShop/farmShop01_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/buildings/farmShop/farmShop01_normal.png" relativePath="true"/>
+    <File fileId="6" filename="models/buildings/farmShop/farmShop01_specular.png" relativePath="true"/>
+    <File fileId="1" filename="models/buildings/farmShop/farmShop02_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/buildings/farmShop/farmShop02_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/buildings/farmShop/farmShop02_specular.png" relativePath="true"/>
+    <File fileId="7" filename="models/buildings/farmShop/farmShopRail_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="particleSystems/particleSystemShader.xml" relativePath="true"/>
+    <File fileId="8" filename="particleSystems/smokeParticle.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="farmShopRail_mat" materialId="24" ambientColor="1 1 1" cosPower="20" specularColor="0.6 0.6 0.6">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="farmShop02_mat" materialId="23" ambientColor="1 1 1" cosPower="10" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="smokeParticle_mat" materialId="85" ambientColor="1 1 1" alphaBlending="true" customShaderId="9">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="farmShop01_mat" materialId="89" ambientColor="1 1 1" cosPower="10" specularColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="lambert1" materialId="214" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="farmShop.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+    <ParticleSystem name="smokeParticleSystem_emitter1Ref" dynamicId="4" type="sprite" rate="0.004" lifespan="5000" maxCount="30" speed="0.0015" speedRandom="0" tangentSpeed="0.205298" normalSpeed="1" spriteScaleX="0.75" spriteScaleY="0.75" spriteScaleXGain="0.0007" spriteScaleYGain="0.0007" blendFactor="0.75" blendInFactor="0.1" blendOutFactor="0.5" randomInitRotation="true" deltaRotateMax="0.000349066" textureAtlasSizeX="4">
+      <Gravity force="0 0 0"/>
+    </ParticleSystem>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="farmShop" translation="-200 88.1 -680" nodeId="6789" lodDistance="0 150">
+      <Shape shapeId="1" name="FarmShop02_lod0" static="true" clipDistance="500" nodeId="6790" materialIds="23" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="2" name="FarmShop01_lod0" static="true" clipDistance="500" nodeId="6791" materialIds="89" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="3" name="FarmShopRail_lod0" static="true" clipDistance="500" nodeId="6792" materialIds="24" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Dynamic dynamicId="4" emitterShapeNodeId="6795" name="smokeParticleSystem_emitter1" translation="-21.1944 19.8466 8.25221" clipDistance="150" nodeId="6794" materialIds="85" distanceBlending="false">
+          <Shape shapeId="5" name="smokeParticleSystemAreaShape" translation="0.00390306 0 -0.0612618" scale="0.75 0.75 0.75" nodeId="6795" materialIds="214" nonRenderable="true"/>
+        </Dynamic>
+      </Shape>
+      <Shape shapeId="6" name="FarmShop02_lod1" clipDistance="500" nodeId="6796" materialIds="23" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="7" name="FarmShop01_lod1" clipDistance="500" nodeId="6797" materialIds="89" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

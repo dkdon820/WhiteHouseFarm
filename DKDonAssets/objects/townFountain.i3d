@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="8" filename="models/cubemapGlobal.dds" relativePath="true"/>
+    <File fileId="6" filename="models/natural/stream/stream_diffuse.png" relativePath="true"/>
+    <File fileId="7" filename="models/natural/stream/stream_normal.png" relativePath="true"/>
+    <File fileId="4" filename="models/objects/townFountain/townFountainPipe_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="models/objects/townFountain/townFountainPipe_normal.png" relativePath="true"/>
+    <File fileId="1" filename="models/objects/townFountain/townFountain_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/objects/townFountain/townFountain_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/objects/townFountain/townFountain_specular.png" relativePath="true"/>
+    <File fileId="9" filename="shaders/oceanShader.xml" relativePath="true"/>
+    <File fileId="10" filename="sounds/fountainJet.wav" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="townFountainPipe_mat" materialId="88" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="lambert1" materialId="214" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="fountainWater_mat" materialId="228" ambientColor="1 1 1" cosPower="2" specularColor="1 1 1" alphaBlending="true" customShaderId="9">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Reflectionmap fileId="8" wrap="false" lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="cube" scaling="1" refractiveIndex="0.5" bumpScale="0.1" shapesObjectMask="2147483647" lightsObjectMask="4294967295"/>
+      <CustomParameter name="bumpSpeedScale" value="0 0 0 0"/>
+      <CustomParameter name="reflectionAmount" value="0 0 0 0"/>
+      <CustomParameter name="underwaterFogColor" value="0 0 0 0"/>
+    </Material>
+    <Material name="fountainJet_mat" materialId="215" ambientColor="1 1 1" cosPower="5" specularColor="2 2 2" alphaBlending="true" customShaderId="9">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <CustomParameter name="bumpSpeedScale" value="0 0 0 0"/>
+      <CustomParameter name="reflectionAmount" value="0 0 0 0"/>
+      <CustomParameter name="underwaterFogColor" value="0 0 0 0"/>
+    </Material>
+    <Material name="townFountain_mat" materialId="285" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="townFountain.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="townFountain" translation="272 155 403" static="true" clipDistance="150" nodeId="7785" materialIds="285" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="townFountainPipe" clipDistance="50" nodeId="7786" materialIds="88" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="fountainWater" clipDistance="100" nodeId="7787" materialIds="228" receiveShadows="true"/>
+      <Shape shapeId="4" name="fountainJet" clipDistance="100" nodeId="7788" materialIds="215" receiveShadows="true"/>
+      <AudioSource name="fountainJetSound" translation="0 -0.5 0" nodeId="7789" fileId="10" range="15" innerRange="0.5" volume="1" loops="0"/>
+      <Shape shapeId="5" name="fountainWaterTrigger" static="true" trigger="true" collisionMask="10485760" nodeId="7791" materialIds="214" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="7791">
+      <Attribute name="onCreate" type="scriptCallback" value="WaterTrailerFillTrigger.onCreate"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/buildings/poleBarns/poleBarn03_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/buildings/poleBarns/poleBarn03_normal.png" relativePath="true"/>
+    <File fileId="3" filename="models/buildings/poleBarns/poleBarn03_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="poleBarn03_mat" materialId="209" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="gardenCenterOpen.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="poleBarn04" translation="278 155 358" rotation="0 200 0" clipDistance="400" nodeId="7777" lodDistance="0 120">
+      <Shape shapeId="1" name="poleBarn_lod01" oc="true" static="true" clipDistance="400" nodeId="7778" materialIds="209" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="poleBarn_lod02" oc="true" clipDistance="400" nodeId="7779" materialIds="209" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

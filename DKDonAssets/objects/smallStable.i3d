@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/buildings/openStables/openStable03_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/buildings/openStables/openStable03_normal.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="openStable03_mat" materialId="28" ambientColor="1 1 1" cosPower="20" specularColor="0.2 0.2 0.2">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="smallStable.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="openStable03" translation="-224.643 88.1 -736.531" rotation="0 -10 0" clipDistance="350" nodeId="6706" lodDistance="0 50">
+      <Shape shapeId="1" name="openStable03" static="true" nodeId="6707" materialIds="28" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="openStable03_lod" static="true" clipDistance="350" nodeId="6708" materialIds="28" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

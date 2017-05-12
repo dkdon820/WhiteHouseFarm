@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="models/natural/trees/treeBranches_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="models/objects/woodwork/chickenCoop_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/objects/woodwork/chickenCoop_normal.png" relativePath="true"/>
+    <File fileId="4" filename="shaders/windShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="chickenCoop_mat" materialId="133" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+    <Material name="treeBranches_mat" materialId="193" ambientColor="1 1 1" customShaderId="4">
+      <Texture fileId="3"/>
+      <CustomParameter name="directionAndFrequency" value="0.06 0 0 1.2"/>
+      <CustomParameter name="speed" value="1 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="squarePlanterFull.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="planterBoxSquare" translation="503 155.498 258" static="true" clipDistance="150" nodeId="4030" materialIds="133" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="bush05" translation="-0.608124 0.794189 0.0598755" rotation="0 60 0" scale="0.5 1 0.5" clipDistance="100" nodeId="4031" materialIds="193" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="bush05" translation="0.636368 0.793503 0.133911" scale="0.6 0.75 0.6" clipDistance="100" nodeId="4032" materialIds="193" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

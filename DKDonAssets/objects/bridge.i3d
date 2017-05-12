@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="textures/terrain/asphalt_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="textures/terrain/bridges/bridgeBrickWall_diffuse.png" relativePath="true"/>
+    <File fileId="1" filename="textures/terrain/bridges/bridgeDetails_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="bridgeBrickWall_mat" materialId="118" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="asphaltDirtified_mat" materialId="157" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="bridgeDetails_mat" materialId="256" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bridge.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="riverBridge" translation="-350 95.1526 -813" static="true" clipDistance="400" nodeId="12035" materialIds="256" castsShadows="true" receiveShadows="true">
+      <Shape shapeId="2" name="riverBridgeAsphalt" static="true" nodeId="12036" materialIds="157" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="riverBridgeBrickWall" static="true" nodeId="12037" materialIds="118" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

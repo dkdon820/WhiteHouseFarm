@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/natural/ivy/ivy_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="ivy_mat" materialId="218" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="ivy.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="ivy" translation="-630.765 94.9818 -13.7661" scale="0.85 0.85 0.85" clipDistance="150" nodeId="5285" materialIds="218" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>

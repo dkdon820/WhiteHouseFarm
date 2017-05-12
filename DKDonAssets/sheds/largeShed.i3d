@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="models/buildings/poleBarns/poleBarn01_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="models/buildings/poleBarns/poleBarn01_normal.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="poleBarn01_mat" materialId="71" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="largeShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="poleBarn01" translation="-71 88 -616" rotation="0 90 0" nodeId="14569" lodDistance="0 100">
+      <Shape shapeId="1" name="poleBarn01_vis" static="true" nodeId="14570" materialIds="71" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="poleBarn01_lod" clipDistance="400" nodeId="14571" materialIds="71" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
