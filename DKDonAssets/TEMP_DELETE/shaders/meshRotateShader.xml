@@ -60,7 +60,7 @@ float2 m_getRotationSinCos()
     mResultPosition += mDeformedPositionY * rotationSpeed.y;
     mResultPosition += mDeformedPositionZ * rotationSpeed.z;
 
-    return float4( mResultPosition, 1.0 );
+    return mResultPosition;
 ]]>
             </CodeInjection>
             <CodeInjection position="GET_NORMAL_VS">
@@ -128,10 +128,17 @@ float2 m_getRotationSinCos()
     return cross(getNormal(In), getTangent(In))*In.tangent.w;
 ]]>
             </CodeInjection>
+            <CodeInjection position="GET_FOG_COLOR_FS">
+<![CDATA[
+#if defined(LIGHT) && defined(ALPHA_BLENDED) && FOG_MODE != 0
+    return oColor.xyz*In.vs.fogFactor; // In additive blending mode, we need to use a black fog color
+#endif
+]]>
+            </CodeInjection>
             <CodeInjection position="FINAL_POS_FS">
 <![CDATA[
-#if defined( LIGHT ) && defined( ALPHA_BLENDED )
-    oColor.a = 0.0f; // additive blending
+#if defined(LIGHT) && defined(ALPHA_BLENDED)
+    oColor.a = 0.0; // additive blending
 #endif
 ]]>
             </CodeInjection>

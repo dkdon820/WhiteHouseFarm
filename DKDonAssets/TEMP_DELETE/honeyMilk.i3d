@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="slow_bee_kuhl" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="54" filename="shaders/meshRotateShader.xml" relativePath="true"/>
+    <File fileId="52" filename="sounds/airBlowerLoop.wav" relativePath="true"/>
+    <File fileId="22" filename="textures/BaseFarbe01.dds" relativePath="true"/>
+    <File fileId="17" filename="textures/Bodenfliesen0005_1024x1024.dds" relativePath="true"/>
+    <File fileId="8" filename="textures/DachBraun1.dds" relativePath="true"/>
+    <File fileId="26" filename="textures/DeckeVentilator_01.dds" relativePath="true"/>
+    <File fileId="51" filename="textures/Detail.dds" relativePath="true"/>
+    <File fileId="9" filename="textures/EdelstahlFlach1024x1024.dds" relativePath="true"/>
+    <File fileId="12" filename="textures/EdelstahlFront1024x1024.dds" relativePath="true"/>
+    <File fileId="24" filename="textures/ElektrikElektronik01.dds" relativePath="true"/>
+    <File fileId="18" filename="textures/Elektroschrank_001.dds" relativePath="true"/>
+    <File fileId="19" filename="textures/Elektroschrank_002.dds" relativePath="true"/>
+    <File fileId="44" filename="textures/Fliesenboden_01_neu.dds" relativePath="true"/>
+    <File fileId="21" filename="textures/GitterLuftRundKlein.dds" relativePath="true"/>
+    <File fileId="25" filename="textures/GitterMasch512x512.dds" relativePath="true"/>
+    <File fileId="28" filename="textures/GitterTransparent1.dds" relativePath="true"/>
+    <File fileId="27" filename="textures/HammerschlagGruen.dds" relativePath="true"/>
+    <File fileId="33" filename="textures/Kaelteaggregat01.dds" relativePath="true"/>
+    <File fileId="38" filename="textures/Kletterpflanze.dds" relativePath="true"/>
+    <File fileId="29" filename="textures/Kuehlrippe1.dds" relativePath="true"/>
+    <File fileId="30" filename="textures/Kuehlrippe2.dds" relativePath="true"/>
+    <File fileId="23" filename="textures/Luefter_001.dds" relativePath="true"/>
+    <File fileId="36" filename="textures/PKW_frei_zusatz.dds" relativePath="true"/>
+    <File fileId="47" filename="textures/PoleClamp.dds" relativePath="true"/>
+    <File fileId="48" filename="textures/Pole_specular.dds" relativePath="true"/>
+    <File fileId="3" filename="textures/Rotbuche0101.dds" relativePath="true"/>
+    <File fileId="50" filename="textures/Rund_specular.dds" relativePath="true"/>
+    <File fileId="13" filename="textures/SchluessellochEdelstahl.dds" relativePath="true"/>
+    <File fileId="34" filename="textures/SolarAnlage_01.dds" relativePath="true"/>
+    <File fileId="10" filename="textures/TranspFlaechen512x512_1.dds" relativePath="true"/>
+    <File fileId="11" filename="textures/Transparent256x256.dds" relativePath="true"/>
+    <File fileId="16" filename="textures/Urkunde_03.dds" relativePath="true"/>
+    <File fileId="49" filename="textures/Verbot_LKW.dds" relativePath="true"/>
+    <File fileId="4" filename="textures/WandfliesenGrauWeiss_1024x1024.dds" relativePath="true"/>
+    <File fileId="5" filename="textures/WandputzGrau1024x1024.dds" relativePath="true"/>
+    <File fileId="20" filename="textures/WarnungElektrik.dds" relativePath="true"/>
+    <File fileId="6" filename="textures/ZiegelPutzBeton.dds" relativePath="true"/>
+    <File fileId="37" filename="textures/Zusatzzeichen_mittel_specular.dds" relativePath="true"/>
+    <File fileId="53" filename="textures/beaconLightCorona_diffuse.png" relativePath="true"/>
+    <File fileId="45" filename="textures/boardStack_diffuse.dds" relativePath="true"/>
+    <File fileId="7" filename="textures/clayWeiss1024x1024.dds" relativePath="true"/>
+    <File fileId="32" filename="textures/gittereffekt80130.dds" relativePath="true"/>
+    <File fileId="35" filename="textures/kleines.dds" relativePath="true"/>
+    <File fileId="31" filename="textures/stutzen.dds" relativePath="true"/>
+    <File fileId="39" filename="textures/treeSaplingPallet_diffuse.png" relativePath="true"/>
+    <File fileId="40" filename="textures/treeSaplingPallet_normal.png" relativePath="true"/>
+    <File fileId="41" filename="textures/treeSaplingPallet_specular.png" relativePath="true"/>
+    <File fileId="42" filename="textures/wabe.dds" relativePath="true"/>
+    <File fileId="14" filename="textures/window_diffuse.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Rotbuche" materialId="7" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="StegRostTrsp512x512" materialId="8" ambientColor="1 1 1" alphaBlending="true">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="poleClampSign_texture" materialId="16" diffuseColor="0 0 0 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="EdelstahlFlach1024x1024.001" materialId="26" ambientColor="1 1 1" cosPower="11" specularColor="0.036303 0.036303 0.036303" alphaBlending="true">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="Urkunde" materialId="27" ambientColor="1 1 1" cosPower="50" specularColor="0.162643 0.159199 0.023567">
+      <Texture fileId="16"/>
+    </Material>
+    <Material name="Dachpfanne" materialId="28" ambientColor="1 1 1">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="WandfiesenGrauWeiss" materialId="14" ambientColor="1 1 1" cosPower="12" specularColor="0.367237 0.367237 0.367237">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="Fliesen rot" materialId="13" ambientColor="1 1 1" cosPower="12" specularColor="0.190179 0.190179 0.190179">
+      <Texture fileId="17"/>
+    </Material>
+    <Material name="WarnschildElektrik" materialId="18" ambientColor="1 1 1" cosPower="50" specularColor="0.4869 0.4869 0.4869" alphaBlending="true">
+      <Texture fileId="20"/>
+    </Material>
+    <Material name="Pflaster" materialId="11" ambientColor="1 1 1" cosPower="12" specularColor="0.102475 0.102475 0.102475">
+      <Texture fileId="44"/>
+    </Material>
+    <Material name="ElektrikKasten02" materialId="15" ambientColor="1 1 1" cosPower="50" specularColor="0.201902 0.201902 0.201902">
+      <Texture fileId="19"/>
+    </Material>
+    <Material name="EdelstahlFlach1024x1024" materialId="20" ambientColor="1 1 1" cosPower="12" specularColor="0.570473 0.570473 0.570473">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="wabe" materialId="12" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="42"/>
+    </Material>
+    <Material name="GitterTransparent1" materialId="17" ambientColor="1 1 1" cosPower="12" specularColor="0.827559 0.827559 0.827559" alphaBlending="true">
+      <Texture fileId="28"/>
+    </Material>
+    <Material name="HammerschlagBlau" materialId="21" ambientColor="1 1 1" cosPower="50" specularColor="0.201902 0.201902 0.201902">
+      <Texture fileId="27"/>
+    </Material>
+    <Material name="sign_texture" materialId="19" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="36"/>
+      <Glossmap fileId="37"/>
+    </Material>
+    <Material name="baseWedgePoleClamp_texture" materialId="10" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="47"/>
+      <Glossmap fileId="48"/>
+    </Material>
+    <Material name="Stutzen" materialId="22" ambientColor="1 1 1" cosPower="20" specularColor="0.1 0.1 0.1">
+      <Texture fileId="31"/>
+    </Material>
+    <Material name="KuehlAggregat" materialId="23" ambientColor="1 1 1" cosPower="12" specularColor="0.094535 0.300627 0.486899">
+      <Texture fileId="33"/>
+    </Material>
+    <Material name="Material" materialId="24" diffuseColor="0.8 0.8 0.8 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="Scheiben" materialId="25" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1" alphaBlending="true">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="Kletterpflanze" materialId="29" ambientColor="1 1 1" alphaBlending="true">
+      <Texture fileId="38"/>
+    </Material>
+    <Material name="Kuehlrippe1" materialId="30" ambientColor="1 1 1" cosPower="50" specularColor="0.266762 0.266762 0.266762">
+      <Texture fileId="29"/>
+    </Material>
+    <Material name="BaseFarbe01" materialId="9" ambientColor="1 1 1" cosPower="12" specularColor="0.060721 0.060721 0.060721">
+      <Texture fileId="22"/>
+    </Material>
+    <Material name="SolarAnlage" materialId="35" ambientColor="1 1 1" cosPower="12" specularColor="0.119277 0.119277 0.119277">
+      <Texture fileId="34"/>
+    </Material>
+    <Material name="sign_texture" materialId="41" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="49"/>
+      <Glossmap fileId="50"/>
+    </Material>
+    <Material name="ZiegelPutzBeton" materialId="43" ambientColor="1 1 1">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="Filtergitter" materialId="44" ambientColor="1 1 1" cosPower="12" specularColor="0.214036 0.214036 0.214036">
+      <Texture fileId="32"/>
+    </Material>
+    <Material name="Material.001" materialId="32" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="35"/>
+    </Material>
+    <Material name="treeSaplingPallet_mat" materialId="36" ambientColor="1 1 1" cosPower="100" specularColor="1 1 1">
+      <Texture fileId="39"/>
+      <Normalmap fileId="40"/>
+      <Glossmap fileId="41"/>
+    </Material>
+    <Material name="Weisselfarbe" materialId="47" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="EdelstahlFlach" materialId="48" ambientColor="1 1 1" cosPower="50" specularColor="0.410941 0.410941 0.410941">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="Scheibe" materialId="46" ambientColor="1 1 1" cosPower="6" specularColor="0.001031 0.001031 0.001031">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="EdelstahlFrontKreis" materialId="50" ambientColor="1 1 1" cosPower="12" specularColor="0.517336 0.517336 0.517336">
+      <Texture fileId="12"/>
+    </Material>
+    <Material name="EdelstahlFront" materialId="53" ambientColor="1 1 1" cosPower="50" specularColor="0.486899 0.486899 0.486899">
+      <Texture fileId="12"/>
+    </Material>
+    <Material name="lambert1" materialId="49" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="DeckeVentilator" materialId="54" ambientColor="1 1 1" cosPower="12" specularColor="0.239554 0.239554 0.239554">
+      <Texture fileId="26"/>
+    </Material>
+    <Material name="ElktrikElektonik01" materialId="39" ambientColor="1 1 1" cosPower="12" specularColor="0.27383 0.27383 0.27383">
+      <Texture fileId="24"/>
+    </Material>
+    <Material name="Deckenluefter" materialId="42" ambientColor="1 1 1" cosPower="12" specularColor="0.281011 0.281011 0.281011">
+      <Emissivemap fileId="23"/>
+    </Material>
+    <Material name="Material" materialId="45" ambientColor="1 1 1" cosPower="10" specularColor="0.1 0.1 0.1">
+      <Texture fileId="45"/>
+    </Material>
+    <Material name="LuefterRundklein01" materialId="31" ambientColor="1 1 1" cosPower="50" specularColor="0.303199 0.303199 0.303199">
+      <Texture fileId="21"/>
+    </Material>
+    <Material name="Elektrik01" materialId="33" ambientColor="1 1 1" cosPower="50" specularColor="0.201903 0.201903 0.201903">
+      <Texture fileId="18"/>
+    </Material>
+    <Material name="Marhu" materialId="51" diffuseColor="0 0 1 1" ambientColor="0 0 1" cosPower="20" specularColor="0 0 1">
+    </Material>
+    <Material name="GitterMaschine" materialId="34" ambientColor="1 1 1" cosPower="50" specularColor="0.259799 0.259799 0.259799">
+      <Texture fileId="25"/>
+    </Material>
+    <Material name="WandputzGrau" materialId="40" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="Scheibe" materialId="52" ambientColor="1 1 1" cosPower="6" specularColor="0.001031 0.001031 0.001031" alphaBlending="true">
+      <Texture fileId="14"/>
+    </Material>
+    <Material name="beaconLightCorona_mat" materialId="38" ambientColor="1 1 1" alphaBlending="true" customShaderId="54">
+      <Emissivemap fileId="53"/>
+      <CustomParameter name="rotationSpeed" value="0 0 0 0"/>
+    </Material>
+    <Material name="Kuehlrippe2" materialId="58" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="30"/>
+    </Material>
+    <Material name="FlaecheTransparent" materialId="57" ambientColor="1 1 1" alphaBlending="true">
+      <Texture fileId="11"/>
+    </Material>
+    <Material name="gray_mat" materialId="56" diffuseColor="0.584314 0.584314 0.584314 1" ambientColor="0.588235 0.588235 0.588235">
+    </Material>
+    <Material name="cachet" materialId="55" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="51"/>
+      <Glossmap fileId="48"/>
+    </Material>
+    <Material name="Schluesselloch" materialId="59" ambientColor="1 1 1" cosPower="50" specularColor="0.358842 0.358842 0.358842">
+      <Texture fileId="13"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="honeyMilk.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="slow_bee_kuhl" clipDistance="500" nodeId="135" materialIds="51" nonRenderable="true">
+      <TransformGroup name="inputTrigger" nodeId="136">
+        <TransformGroup name="Rohstoff1" nodeId="137">
+          <Shape shapeId="2" name="WoodTrigger" static="true" trigger="true" collisionMask="16777216" nodeId="138" materialIds="56" nonRenderable="true">
+            <Shape shapeId="3" name="abKuelhausWandHinten" translation="0 0.005 0" static="true" clipDistance="1000" nodeId="139" materialIds="7,14,40" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="4" name="abKuelhausWandRechts" translation="0 0.004862 0" static="true" clipDistance="1000" nodeId="140" materialIds="7,14,40" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="5" name="abKuelhausWandLinks" static="true" clipDistance="1000" nodeId="141" materialIds="7,14,40" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="6" name="abKuelhausWandVorne" translation="0 0.005 7.799" static="true" clipDistance="1000" nodeId="142" materialIds="7,14,40" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="7" name="abKuelhausDecke" translation="0 0.004862 0" scale="1.01307 1 1.01932" static="true" clipDistance="1000" nodeId="143" materialIds="43,47" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="8" name="bhDachBalken" translation="5.1186 4.60691 1.556" static="true" clipDistance="1000" nodeId="144" materialIds="7" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="9" name="bhDachpfannen" translation="0 8.74726 0" static="true" clipDistance="1000" nodeId="145" materialIds="28,7" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="10" name="bhDachrinne" translation="0 4.71962 7.473" rotation="-90 -0 0" scale="7.3996 1 1" static="true" collision="false" clipDistance="1000" nodeId="146" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="11" name="biTreppeAussen" translation="4.92724 0.72725 -0.005" static="true" clipDistance="1000" nodeId="147" materialIds="20,8" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="12" name="bgRegal" static="true" clipDistance="100" nodeId="148" materialIds="20,57" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="13" name="baMilchtankSteg" translation="0.008 0.749503 -0.008" static="true" clipDistance="100" nodeId="149" materialIds="20,8,50" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="Log" nodeId="150">
+              <Shape shapeId="14" name="TuerDachBlatt" translation="6.97097 5.85325 0.789" rotation="-180 19.1087 -180" clipDistance="1000" nodeId="151" materialIds="7,53,59" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="15" name="TuerHausBlatt" translation="5.92907 1.30399 3.95" clipDistance="1000" nodeId="152" materialIds="7,53,59" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="16" name="Scheibe_Aussentuer_Blatt" translation="0 0 -0.0366118" scale="0.01 0.01 0.01" clipDistance="1000" nodeId="153" materialIds="52" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <TransformGroup name="Doors" nodeId="154">
+                <Shape shapeId="17" name="doorTriger" translation="-3 1 3.52384" rotation="0 90 0" scale="3 1 2" static="true" trigger="true" collisionMask="3145728" linearDamping="0.5" angularDamping="0.5" clipDistance="100" nodeId="155" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+                  <Shape shapeId="18" name="TorSchiebeKuehl" translation="-0.196953 1.13062 -0.0384988" rotation="0 270 0" scale="0.5 1 0.3" clipDistance="1000" nodeId="156" materialIds="7,20" castsShadows="true" receiveShadows="true"/>
+                </Shape>
+              </TransformGroup>
+              <TransformGroup name="Scheiben_Kuehlhaus" scale="0.01 0.01 0.01" clipDistance="1000" nodeId="157">
+                <Shape shapeId="19" name="Scheibe_Oben" clipDistance="1000" nodeId="158" materialIds="25" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="20" name="Scheibe_Schaltkasten_Unten_Links" clipDistance="100" nodeId="159" materialIds="25" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="21" name="Scheibe_Schaltkasten_Unten_Rechts" clipDistance="100" nodeId="160" materialIds="25" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="22" name="Scheibe_Unten_Rechts" clipDistance="1000" nodeId="161" materialIds="25" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+              <Shape shapeId="23" name="HaustuerRahmen" translation="5.93275 1.30306 3.929" clipDistance="1000" nodeId="162" materialIds="7" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="24" name="Scheibe_Aussentuer_Rahmen" scale="0.01 0.01 0.01" clipDistance="1000" nodeId="163" materialIds="52" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="25" name="TorSchiebeKuehl" translation="1.84009 2.16457 4.104" clipDistance="1000" nodeId="164" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="26" name="TuerDachRahmen" translation="6.95845 5.7486 0.789" clipDistance="1000" nodeId="165" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="27" name="bgFensterUnten" translation="6.43558 1.81405 2.674" clipDistance="1000" nodeId="166" materialIds="20,7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="28" name="cbUrkunde" translation="6.36433 1.82888 4.0052" scale="0.235758 0.235758 0.235758" clipDistance="100" nodeId="167" materialIds="27" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="Log" nodeId="168">
+              <TransformGroup name="cElektrikEG" clipDistance="100" nodeId="169">
+                <Shape shapeId="29" name="acElektroraum" translation="0 -0.498308 -0.293" rotation="90 -0 0" clipDistance="1000" nodeId="170" materialIds="13,47,14,43,26" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="30" name="bbElektrikKasten01" translation="5.18987 1.34031 0.289266" scale="1 1 1.59477" clipDistance="100" nodeId="171" materialIds="33" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="31" name="bbElektrikKasten02" translation="6.37491 1.11385 1.31998" scale="1 1 1.59477" clipDistance="100" nodeId="172" materialIds="15" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="32" name="bbElektrikKasten1Warnschild" rotation="90 -0 0" clipDistance="100" nodeId="173" materialIds="18" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="33" name="bbElektrikKasten2Warnschild" rotation="90 -0 0" clipDistance="100" nodeId="174" materialIds="18" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="34" name="bbElektrikLuefter" translation="0 1.17784 8.40555" clipDistance="100" nodeId="175" materialIds="31,50" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="35" name="bbKabelLichtEG" translation="3.26428 1.48342 1.493" clipDistance="100" nodeId="176" materialIds="9,50,42,15,39" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="36" name="bgTuerKuehlRahmen" translation="3.81027 1.20308 3.359" clipDistance="1000" nodeId="177" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+              <TransformGroup name="Tuer_Kuehl" translation="3.80916 1.29903 3.357" rotation="-2.19666e-13 0 0" clipDistance="100" nodeId="178">
+                <Shape shapeId="37" name="TuerKuehlSchliesser" clipDistance="100" nodeId="179" materialIds="53" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="38" name="TuerKuehlScharniere" translation="0 -1.03995 1e-06" clipDistance="100" nodeId="180" materialIds="53" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="39" name="TuerKuehlGriff" clipDistance="100" nodeId="181" materialIds="53" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="40" name="TuerKuehlBlatt" translation="-0 -1.5e-05 1e-06" clipDistance="100" nodeId="182" materialIds="48" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="41" name="Scheibe_Tuer_Kuehl" translation="-0.485238 -0.441125 -0.035" clipDistance="100" nodeId="183" materialIds="46" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="Log" nodeId="184">
+              <TransformGroup name="bMilchanlage" clipDistance="300" nodeId="185">
+                <Shape shapeId="42" name="baMilchtank" translation="1.80369 0.578212 -0" rotation="90 -0 0" clipDistance="100" nodeId="186" materialIds="50,15" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="43" name="baMilchtankRohre" translation="2.375 -0.76673 -1.99857" clipDistance="300" nodeId="187" materialIds="50,9,20,33" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="44" name="baMilchtankpumpe" translation="4.30768 0.771995 0.406283" rotation="90 -0 0" scale="0.339041 0.167866 0.339041" clipDistance="100" nodeId="188" materialIds="50,34,9,54,33,21,17,20,30,58,39" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="45" name="Stutzen" translation="-5.88162 1.75096 4.03184" rotation="0 180 0" scale="1.1 1 1.1" nodeId="189" materialIds="22" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="Log" nodeId="190">
+              <TransformGroup name="eDachgeraete" clipDistance="300" nodeId="191">
+                <Shape shapeId="46" name="bdKuehlanlage" translation="0 1.24345 1.5843" clipDistance="300" nodeId="192" materialIds="50,54,44,23,9,15,39,42" castsShadows="true" receiveShadows="true"/>
+                <TransformGroup name="fSolar" clipDistance="1000" nodeId="193">
+                  <Shape shapeId="47" name="bfSolarpanele" translation="0 8.68135 -0" clipDistance="1000" nodeId="194" materialIds="35,20,9" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="lights" nodeId="195">
+                <TransformGroup name="day_night" visibility="false" nodeId="196">
+                  <Light name="pointLight29" translation="0 2.65518 6.00398" clipDistance="120" nodeId="197" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+                  <Light name="pointLight29" translation="-4.22042 2.65518 0.0291534" clipDistance="120" nodeId="198" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+                  <Light name="pointLight29" translation="1.07351 2.65518 0.0291534" clipDistance="120" nodeId="199" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+                  <Light name="pointLight29" translation="5.34716 2.59506 1.66525" clipDistance="120" nodeId="200" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="Beschilderung" nodeId="201">
+              <Shape shapeId="48" name="loadingZone" translation="-6.2227 2.2 4.0027" rotation="90 -0 -90" scale="0.3 1 0.3" nodeId="202" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="48" name="loadingZone" translation="6.5 2.2 4.00225" rotation="90 -0 -90" scale="0.3 1 0.3" nodeId="203" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="49" name="noParking" translation="6.5 1.719 4.01838" rotation="90 -0 90" scale="0.5 1 0.5" nodeId="204" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="50" name="sign" translation="5.11424 4.16051 6.52995" rotation="0 90 0" nodeId="205" materialIds="19" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="51" name="milk" translation="-2.19971e-09 -0.00465142 0.0456721" rotation="90 0 -90" scale="0.4 1 0.4" nodeId="206" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="50" name="sign" translation="5.11424 4.16051 6.52995" rotation="0 270 0" nodeId="207" materialIds="19" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="51" name="milk" translation="-2.19971e-09 -0.00465142 0.0456721" rotation="90 0 -90" scale="0.4 1 0.4" nodeId="208" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="50" name="sign" translation="-6.31927 1.82085 3.99918" nodeId="209" materialIds="19" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="52" name="honeyMilk" translation="-2.11896e-09 9.26227e-17 0.0484761" rotation="90 0 -90" scale="0.33 1 0.33" nodeId="210" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="50" name="sign" translation="-3.79159 2.24194 -2.224" scale="0.5 0.5 0.5" nodeId="211" materialIds="19" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="53" name="honey" translation="-2.1017e-09 9.18682e-17 0.0480813" rotation="90 0 -90" scale="0.35 1 0.35" nodeId="212" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="48" name="loadingZone" translation="-2.31281 1.82381 -3.7866" rotation="90 -0 -90" scale="0.3 1 0.3" nodeId="213" materialIds="32" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <Shape shapeId="54" name="caKletterpflanze" translation="7.00454 1.52507 -13.885" rotation="-0 0 -90" static="true" clipDistance="1000" nodeId="214" materialIds="29,7" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="2" name="PalletTrigger" translation="-8.842 -0.489634 0.147815" scale="6 1 5" static="true" trigger="true" collisionMask="16777216" nodeId="215" materialIds="56" nonRenderable="true"/>
+        </TransformGroup>
+        <TransformGroup name="Rohstoff2" nodeId="216">
+          <TransformGroup name="LiquideTrigger" translation="1.77514 -0.97983 -7.59701" rotation="-2.80405e-07 0 1.10662e-07" nodeId="217">
+            <Shape shapeId="55" name="waterFillTrigger" translation="3.3145 0.979518 15.7914" rotation="0 90 0" static="true" trigger="true" collisionMask="10485760" nodeId="218" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <TransformGroup name="OverloadPipe" translation="3.34348 5.12584 14.7164" rotation="-90 -0 5.09711e-13" nodeId="219"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="Rohstoff3" nodeId="220">
+          <Shape shapeId="2" name="WoodTrigger" translation="0 -1.16765 0" static="true" trigger="true" collisionMask="16777216" nodeId="221" materialIds="56" nonRenderable="true">
+            <Shape shapeId="56" name="fillablePallet" translation="-2.31756 1.26968 -2.96951" static="true" compound="true" collisionMask="25178120" density="0.15" clipDistance="300" nodeId="222" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="223" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="224">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="225" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="226" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="227" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="228" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="229" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="230" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="231" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="232" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="56" name="fillablePallet" translation="-5.24833 1.26968 -2.96951" static="true" compound="true" collisionMask="25178120" density="0.15" clipDistance="300" nodeId="233" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="234" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="235">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="236" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="237" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="238" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="239" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="240" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="241" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="242" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="243" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="56" name="fillablePallet" translation="0.654281 1.26968 -2.96951" static="true" compound="true" collisionMask="25178120" density="0.15" clipDistance="300" nodeId="244" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="245" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="246">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="247" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="248" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="249" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="250" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="251" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="252" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="253" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="254" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="56" name="fillablePallet" translation="-2.43136 3.47167 -2.96951" clipDistance="300" nodeId="255" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="256" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="257">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="258" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="259" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="260" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="261" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="262" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="263" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="264" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="265" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="56" name="fillablePallet" translation="-5.13607 3.47167 -2.96951" clipDistance="300" nodeId="266" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="267" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="268">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="269" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="270" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="271" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="272" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="273" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="274" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="275" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="276" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="56" name="fillablePallet" translation="0.356819 3.47167 -2.96951" clipDistance="300" nodeId="277" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Shape shapeId="57" name="vis" clipDistance="300" nodeId="278" materialIds="36" castsShadows="true" receiveShadows="true"/>
+              <TransformGroup name="honig" translation="0 0.427 0" nodeId="279">
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 -0.254908" nodeId="280" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.341064 0 0.20595" nodeId="281" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 0.20595" nodeId="282" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.330939 0 -0.253501" nodeId="283" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.346763 0.253 -0.254908" nodeId="284" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="-0.328869 0.253 0.230792" nodeId="285" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335413 0.253 0.214916" nodeId="286" materialIds="12" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="58" name="Karton" translation="0.335006 0.253 -0.250981" nodeId="287" materialIds="12" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+          </Shape>
+          <Shape shapeId="2" name="PalletTrigger" translation="-2.51193 0.0784101 -2.64063" scale="8 4 2" static="true" trigger="true" collisionMask="16777216" nodeId="288" materialIds="56" nonRenderable="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="outputTrigger" nodeId="289">
+        <TransformGroup name="Produkt1" translation="0 0 -10.9797" nodeId="290">
+          <TransformGroup name="LiquideTrigger" translation="-5.6749 -0.423 17.568" scale="0.5 1 1" nodeId="291">
+            <Shape shapeId="55" name="waterFillTrigger" rotation="0 90 0" static="true" trigger="true" collisionMask="10485760" nodeId="292" materialIds="49" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <TransformGroup name="OverloadPipe" translation="-0.412 2.17421 -2.55906" rotation="-5.09711e-13 180 0" scale="2 1 1" nodeId="293"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape shapeId="59" name="PlayerTrigger" translation="-0.885779 -0.289075 1.75383" rotation="-0 90 0" scale="10 5 10" static="true" trigger="true" collisionMask="34603008" nodeId="294" materialIds="24" nonRenderable="true"/>
+      <TransformGroup name="VisObjekts" nodeId="295">
+        <Shape shapeId="60" name="aaGrundplatte" static="true" clipDistance="1000" nodeId="296" materialIds="11,13,43" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="Logs" translation="-2.623 -1.75696 4.44442" rotation="0 -90 0" nodeId="297">
+          <Shape shapeId="61" name="boardStack" translation="-4.06969 1.377 4.49743" rotation="0 90 0" static="true" compound="true" collisionMask="25178120" density="0.01" nodeId="298" materialIds="45" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="61" name="boardStack" translation="-4.06969 1.37706 4.67678" rotation="0 90 0" static="true" compound="true" collisionMask="25178120" density="0.01" nodeId="299" materialIds="45" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="61" name="boardStack" translation="-4.06969 1.50063 4.63493" rotation="0 90 0" static="true" compound="true" collisionMask="25178120" density="0.01" nodeId="300" materialIds="45" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="breakableJoint" translation="-7.04891 -0.43327 -0.147041" rotation="0 270 0" joint="true" breakableJoint="true" jointBreakForce="20" jointBreakTorque="20" rotMinX="0" rotMaxX="0" transMinX="0" transMaxX="0" rotMinY="0" rotMaxY="0" transMinY="0" transMaxY="0" rotMinZ="0" rotMaxZ="0" transMinZ="0" transMaxZ="0" clipDistance="200" nodeId="301">
+          <Shape shapeId="62" name="colli" translation="0.001 0 0.001" rotation="0.0016671 0 -1.96784e-07" static="true" nodeId="302" materialIds="49" nonRenderable="true">
+            <Shape shapeId="63" name="pole" nodeId="303" materialIds="16,10" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="64" name="clamp" nodeId="304" materialIds="10" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="64" name="clamp" translation="0 0.5 0" nodeId="305" materialIds="10" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="65" name="sign" nodeId="306" materialIds="41" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="66" name="truck" translation="0.002 2.503 0.048" rotation="90 0 270" scale="0.76 1 0.76" static="true" nodeId="307" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="67" name="cachet" nodeId="308" materialIds="55" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="68" name="cachet" nodeId="309" materialIds="55" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="69" name="lkw" translation="6.53801e-09 2.47375 0.045" rotation="90 0 270" scale="0.8 1 0.8" static="true" nodeId="310" materialIds="32" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <TransformGroup name="PKWFrei" translation="0 1.82241 0" clipDistance="200" nodeId="311">
+              <Shape shapeId="70" name="clamp" nodeId="312" materialIds="10" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="50" name="sign" nodeId="313" materialIds="19" castsShadows="true" receiveShadows="true">
+                <Shape shapeId="71" name="board" translation="0.00160821 -0.00954386 0.0458298" rotation="90 -5.00894e-06 -90" scale="0.13 1 0.13" nodeId="314" materialIds="32" castsShadows="true" receiveShadows="true"/>
+              </Shape>
+              <Shape shapeId="72" name="cachet" nodeId="315" materialIds="55" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="73" name="cachet" nodeId="316" materialIds="55" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="WorkAnimation" nodeId="317">
+        <TransformGroup name="PS" nodeId="318">
+          <TransformGroup name="Smoke" translation="-5.97525 5.18843 4.10153" rotation="126 -0 0" nodeId="319"/>
+          <TransformGroup name="Smoke" translation="-4.15368 4.39011 1.02275" rotation="0 0 180" nodeId="320"/>
+          <TransformGroup name="Smoke" translation="1.07022 4.39011 1.02275" rotation="0 0 180" nodeId="321"/>
+          <TransformGroup name="Smoke" translation="6.07914 5.18843 4.10153" rotation="126 0 0" nodeId="322"/>
+        </TransformGroup>
+        <TransformGroup name="Animations" nodeId="323"/>
+        <TransformGroup name="Sound" nodeId="324">
+          <AudioSource name="audio" translation="4.20245 -5.29324e-10 0.171683" rotation="180 -87.6606 -180" nodeId="325" fileId="52" range="10" innerRange="5" volume="1" loops="0"/>
+        </TransformGroup>
+        <TransformGroup name="Shader" translation="-14.86 1.55119 -4.41648" rotation="0 90 0" nodeId="327">
+          <TransformGroup name="light1" translation="-4.54 0.279 20.843" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="328">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="329" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light1" translation="-6.163 -0.104 19.197" rotation="-70 0 0" scale="0.5 0.5 0.5" nodeId="330">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="331" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light1" translation="-4.54 0.279 20.876" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="332">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="333" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light1" translation="-4.54 0.279 20.911" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="334">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="335" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light1" translation="-4.54 0.279 20.945" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="336">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="337" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light1" translation="-4.54 0.279 20.982" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="338">
+            <Shape shapeId="74" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="339" materialIds="38" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="clearAreas" nodeId="340">
+        <TransformGroup name="startIndex" translation="-8.5 1.90735e-06 7" nodeId="341"/>
+        <TransformGroup name="widthIndex" translation="-8.5 0 -5.5" nodeId="342"/>
+        <TransformGroup name="heightIndex" translation="10 0 7" nodeId="343"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="135">
+      <Attribute name="Area" type="string" value="5"/>
+      <Attribute name="DoorsIndex" type="string" value="0|0|0|11|2"/>
+      <Attribute name="PlayerIndex" type="string" value="2"/>
+      <Attribute name="ProduktPerHour" type="float" value="10000"/>
+      <Attribute name="WorkAniIndex" type="string" value="4"/>
+      <Attribute name="inputIndex" type="string" value="0"/>
+      <Attribute name="onCreate" type="scriptCallback" value="modOnCreate.FabrikScript"/>
+      <Attribute name="outputIndex" type="string" value="1"/>
+      <Attribute name="saveId" type="string" value="slow_bee_kuhl"/>
+    </UserAttribute>
+    <UserAttribute nodeId="137">
+      <Attribute name="capacity" type="integer" value="16000"/>
+      <Attribute name="factor" type="float" value="0"/>
+      <Attribute name="fillTypes" type="string" value="woodChips"/>
+      <Attribute name="name" type="string" value="slow_kuhl_wood"/>
+    </UserAttribute>
+    <UserAttribute nodeId="155">
+      <Attribute name="MaxTrans" type="float" value="2.3"/>
+      <Attribute name="TransTime" type="float" value="3"/>
+    </UserAttribute>
+    <UserAttribute nodeId="216">
+      <Attribute name="capacity" type="float" value="60000"/>
+      <Attribute name="factor" type="float" value="0.9"/>
+      <Attribute name="fillTypes" type="string" value="milk"/>
+      <Attribute name="name" type="string" value="slow_kuhl_milk"/>
+    </UserAttribute>
+    <UserAttribute nodeId="217">
+      <Attribute name="L_Name" type="string" value="Liquide_milk"/>
+      <Attribute name="fillLitersPerSecond" type="float" value="500"/>
+      <Attribute name="fillType" type="string" value="milk"/>
+      <Attribute name="triggerIndex" type="string" value="0"/>
+      <Attribute name="triggerWidth" type="float" value="2.5"/>
+    </UserAttribute>
+    <UserAttribute nodeId="220">
+      <Attribute name="capacity" type="integer" value="3000"/>
+      <Attribute name="factor" type="float" value="0.1"/>
+      <Attribute name="fillTypes" type="string" value="honey"/>
+      <Attribute name="name" type="string" value="slow_kuhl_honey"/>
+    </UserAttribute>
+    <UserAttribute nodeId="222">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="233">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="244">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="255">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="266">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="277">
+      <Attribute name="meshNodes" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="290">
+      <Attribute name="capacity" type="integer" value="50000"/>
+      <Attribute name="factor" type="float" value="1"/>
+      <Attribute name="fillType" type="string" value="honeymilk"/>
+      <Attribute name="name" type="string" value="slow_kuhl_honeymilk"/>
+    </UserAttribute>
+    <UserAttribute nodeId="291">
+      <Attribute name="L_Name" type="string" value="Liquide_honeymilk"/>
+      <Attribute name="fillLitersPerSecond" type="float" value="500"/>
+      <Attribute name="fillType" type="string" value="honeymilk"/>
+      <Attribute name="triggerIndex" type="string" value="0"/>
+      <Attribute name="triggerWidth" type="float" value="2.5"/>
+    </UserAttribute>
+    <UserAttribute nodeId="317">
+      <Attribute name="AnimationIndex" type="string" value="1"/>
+      <Attribute name="PartikleIndex" type="string" value="0"/>
+      <Attribute name="ShaderIndex" type="string" value="3"/>
+      <Attribute name="SoundIndex" type="string" value="2"/>
+    </UserAttribute>
+    <UserAttribute nodeId="319">
+      <Attribute name="particleSystemFilename" type="string" value="particleSystems/Smoke.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="320">
+      <Attribute name="particleSystemFilename" type="string" value="particleSystems/Smoke.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="321">
+      <Attribute name="particleSystemFilename" type="string" value="particleSystems/Smoke.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="322">
+      <Attribute name="particleSystemFilename" type="string" value="particleSystems/Smoke.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="328">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="329">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="330">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="331">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="332">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="333">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="334">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="335">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="336">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="337">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="338">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="339">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

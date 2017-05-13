@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="slow_bee" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="32" filename="particleSystems/cubemap02.dds" relativePath="true"/>
+    <File fileId="31" filename="particleSystems/fx_grain_normal.png" relativePath="true"/>
+    <File fileId="5" filename="shaders/buildingShader.xml" relativePath="true"/>
+    <File fileId="40" filename="shaders/meshRotateShader.xml" relativePath="true"/>
+    <File fileId="10" filename="shaders/numberShader.xml" relativePath="true"/>
+    <File fileId="19" filename="shaders/windowShader.xml" relativePath="true"/>
+    <File fileId="33" filename="shaders/windrowUnloadingShader.xml" relativePath="true"/>
+    <File fileId="18" filename="shared/default_cube.dds" relativePath="true"/>
+    <File fileId="38" filename="sounds/beehive.wav" relativePath="true"/>
+    <File fileId="36" filename="textures/PKW_frei_zusatz.dds" relativePath="true"/>
+    <File fileId="37" filename="textures/Zusatzzeichen_mittel_specular.dds" relativePath="true"/>
+    <File fileId="41" filename="textures/beaconLightCoronaRed_diffuse.png" relativePath="true"/>
+    <File fileId="39" filename="textures/beaconLightCorona_diffuse.png" relativePath="true"/>
+    <File fileId="24" filename="textures/bgpWet_diffuse.dds" relativePath="true"/>
+    <File fileId="15" filename="textures/bienenhaus_diffuse.dds" relativePath="true"/>
+    <File fileId="16" filename="textures/bienenhaus_specular.dds" relativePath="true"/>
+    <File fileId="3" filename="textures/bienenstock_diffuse.dds" relativePath="true"/>
+    <File fileId="4" filename="textures/bienenstock_specular.dds" relativePath="true"/>
+    <File fileId="11" filename="textures/details_diffuse.dds" relativePath="true"/>
+    <File fileId="12" filename="textures/details_normal.dds" relativePath="true"/>
+    <File fileId="13" filename="textures/details_specular.dds" relativePath="true"/>
+    <File fileId="25" filename="textures/kleines.dds" relativePath="true"/>
+    <File fileId="26" filename="textures/kleines_emmissive.dds" relativePath="true"/>
+    <File fileId="7" filename="textures/leakyConcreteWall_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="textures/numbers_diffuse.png" relativePath="true"/>
+    <File fileId="27" filename="textures/pails_diffuse.png" relativePath="true"/>
+    <File fileId="28" filename="textures/pails_normal.png" relativePath="true"/>
+    <File fileId="29" filename="textures/pails_specular.png" relativePath="true"/>
+    <File fileId="21" filename="textures/schleuder_diffuse.dds" relativePath="true"/>
+    <File fileId="22" filename="textures/schleuder_specular.png" relativePath="true"/>
+    <File fileId="20" filename="textures/wabe.dds" relativePath="true"/>
+    <File fileId="17" filename="textures/window_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="gray_mat" materialId="8" diffuseColor="0.584314 0.584314 0.584314 1" ambientColor="0.588235 0.588235 0.588235">
+    </Material>
+    <Material name="schleuder_mat" materialId="7" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1" customShaderId="5" customShaderVariation="FORCE_GLOOSS_SECONDUV">
+      <Texture fileId="21"/>
+      <Glossmap fileId="22"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+    <Material name="acmat0" materialId="9" ambientColor="1 1 1" cosPower="300" specularColor="1 1 1">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="bienenhaus_mat" materialId="30" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1" customShaderId="5" customShaderVariation="FORCE_GLOOSS_SECONDUV">
+      <Texture fileId="15"/>
+      <Glossmap fileId="16"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+    <Material name="leakyConcreteWall_diffuse" materialId="11" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="wabe" materialId="22" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="20"/>
+    </Material>
+    <Material name="beaconLightCorona_mat" materialId="17" ambientColor="1 1 1" alphaBlending="true" customShaderId="40">
+      <Emissivemap fileId="41"/>
+      <CustomParameter name="rotationSpeed" value="0 1 0 0"/>
+    </Material>
+    <Material name="Material.001" materialId="18" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="25"/>
+    </Material>
+    <Material name="sign_texture" materialId="24" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="36"/>
+      <Glossmap fileId="37"/>
+    </Material>
+    <Material name="number_mat" materialId="15" ambientColor="1 1 1" alphaBlending="true" customShaderId="10">
+      <Texture fileId="9"/>
+      <CustomParameter name="number" value="-1 0 0 0"/>
+      <CustomParameter name="numberColor" value="0 0 0 1"/>
+    </Material>
+    <Material name="lambert1" materialId="29" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="Material.002" materialId="19" diffuseColor="1 1 1 1" ambientColor="1 1 1">
+      <Emissivemap fileId="24"/>
+    </Material>
+    <Material name="beaconLightCorona_mat" materialId="23" ambientColor="1 1 1" alphaBlending="true" customShaderId="40">
+      <Emissivemap fileId="39"/>
+      <CustomParameter name="rotationSpeed" value="0 0 0 0"/>
+    </Material>
+    <Material name="windows_mat" materialId="28" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5" alphaBlending="true" customShaderId="19">
+      <Texture fileId="17"/>
+      <Reflectionmap fileId="18" wrap="false" lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="cube" scaling="1" refractiveIndex="1" bumpScale="0.1" shapesObjectMask="4294967295" lightsObjectMask="4294967295"/>
+    </Material>
+    <Material name="mat_bienenstock" materialId="20" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1" customShaderId="5" customShaderVariation="FORCE_GLOOSS_SECONDUV">
+      <Texture fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="uvScale" value="30 30 2 2"/>
+      <CustomParameter name="colorScale" value="0.8 0.55 0.055 1"/>
+    </Material>
+    <Material name="pails_mat" materialId="26" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="27"/>
+      <Normalmap fileId="28"/>
+      <Glossmap fileId="29"/>
+    </Material>
+    <Material name="Material" materialId="10" diffuseColor="0.8 0.8 0.8 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="Marhu" materialId="21" diffuseColor="0 0 1 1" ambientColor="0 0 1" cosPower="20" specularColor="0 0 1">
+    </Material>
+    <Material name="water_mat" materialId="13" diffuseColor="0.866667 0.792157 0.121569 1" ambientColor="0.784314 0.670588 0.337255" alphaBlending="true" customShaderId="33">
+      <Normalmap fileId="31"/>
+      <Reflectionmap fileId="32" wrap="false" lodDistanceScaling="0.5" viewDistanceScaling="0.5" type="cube" scaling="1" refractiveIndex="1" bumpScale="0.1" shapesObjectMask="4294967295" lightsObjectMask="4294967295"/>
+      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
+      <CustomParameter name="UVScaleSpeed" value="1 -0.1 1 1"/>
+      <CustomParameter name="MaskChannels" value="0.1 0.2 0.5 0"/>
+      <CustomParameter name="ColorAlpha" value="2 1 0 0.2"/>
+      <CustomParameter name="alphaRemap" value="0 1 0 1"/>
+    </Material>
+    <Material name="Material.001" materialId="25" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1">
+      <Texture fileId="25"/>
+      <Emissivemap fileId="26"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="honeybeeShed.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="slow_bee" clipDistance="300" nodeId="73" materialIds="21" nonRenderable="true">
+      <TransformGroup name="inputTrigger" translation="0 -0.1 0" nodeId="74">
+        <TransformGroup name="Rohstoff1" nodeId="75">
+          <Shape shapeId="2" name="PalletTrigger" translation="0.268025 0.301136 0.720296" scale="0.5 1 2.2" static="true" trigger="true" collisionMask="16777216" nodeId="76" materialIds="8" nonRenderable="true"/>
+          <Shape shapeId="2" name="WoodTrigger" translation="0 -1 0" static="true" trigger="true" collisionMask="16777216" nodeId="77" materialIds="8" nonRenderable="true">
+            <TransformGroup name="Bienenstock" translation="0.282 1.539 1.008" nodeId="78">
+              <Shape shapeId="3" name="Deckel" translation="-0.019038 0.72002 -0.008173" static="true" nodeId="79" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="4" name="Futterdeckel" translation="-0.0173634 0.650285 -0.01" static="true" nodeId="80" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="Zarge" translation="-0.0176856 0.489097 -0.00510759" static="true" nodeId="81" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="6" name="Zarge" translation="-0.0186627 0.252 -0.00755093" static="true" nodeId="82" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="7" name="Beutenboden" translation="0.08 0.054 -0.008173" static="true" nodeId="83" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="Bienenstock" translation="0.282 1.539 0.447" nodeId="84">
+              <Shape shapeId="3" name="Deckel" translation="-0.019038 0.72002 -0.008173" static="true" nodeId="85" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="4" name="Futterdeckel" translation="-0.0173634 0.650285 -0.01" static="true" nodeId="86" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="Zarge" translation="-0.0176856 0.489097 -0.00510759" static="true" nodeId="87" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="6" name="Zarge" translation="-0.0186627 0.252 -0.00755093" static="true" nodeId="88" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="7" name="Beutenboden" translation="0.08 0.054 -0.008173" static="true" nodeId="89" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="Bienenstock" translation="0.282 1.539 1.587" nodeId="90">
+              <Shape shapeId="3" name="Deckel" translation="-0.019038 0.72002 -0.008173" static="true" nodeId="91" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="4" name="Futterdeckel" translation="-0.0173634 0.650285 -0.01" static="true" nodeId="92" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="Zarge" translation="-0.0176856 0.489097 -0.00510759" static="true" nodeId="93" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="6" name="Zarge" translation="-0.0186627 0.252 -0.00755093" static="true" nodeId="94" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="7" name="Beutenboden" translation="0.08 0.054 -0.008173" static="true" nodeId="95" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="Bienenstock" translation="0.282 1.539 -0.11" nodeId="96">
+              <Shape shapeId="3" name="Deckel" translation="-0.019038 0.72002 -0.008173" static="true" nodeId="97" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="4" name="Futterdeckel" translation="-0.0173634 0.650285 -0.01" static="true" nodeId="98" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="5" name="Zarge" translation="-0.0176856 0.489097 -0.00510759" static="true" nodeId="99" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="6" name="Zarge" translation="-0.0186627 0.252 -0.00755093" static="true" nodeId="100" materialIds="20" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="7" name="Beutenboden" translation="0.08 0.054 -0.008173" static="true" nodeId="101" materialIds="20" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="outputTrigger" translation="0 -0.1 0" nodeId="102">
+        <TransformGroup name="Produkt2" nodeId="103">
+          <Shape shapeId="8" name="palletSpawner" translation="-2.439 -0.149574 -0.997444" rotation="0 90 0" scale="1 3 1" static="true" clipDistance="150" nodeId="104" materialIds="11" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="9" name="palletSpawnerTrigger" translation="0 0.0973455 0" scale="1 0.3 1" static="true" trigger="true" nodeId="105" materialIds="29" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <TransformGroup name="palletSpawnerPlaceNode" translation="0 0.120375 0" nodeId="106"/>
+          </Shape>
+          <TransformGroup name="Displays" nodeId="107">
+            <TransformGroup name="Display" translation="-1.51562 1.59791 -1" rotation="7.635 270 0" nodeId="108">
+              <Shape shapeId="10" name="numberPart1" translation="0.399723 0.1 0.08" clipDistance="75" nodeId="109" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart2" translation="0.309 0.1 0.08" clipDistance="75" nodeId="110" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart3" translation="0.219248 0.1 0.08" clipDistance="75" nodeId="111" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart4" translation="0.129248 0.1 0.08" clipDistance="75" nodeId="112" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart5" translation="0.039248 0.1 0.08" clipDistance="75" nodeId="113" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart6" translation="-0.050752 0.1 0.08" clipDistance="75" nodeId="114" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart7" translation="-0.140752 0.1 0.08" clipDistance="75" nodeId="115" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart8" translation="-0.230752 0.1 0.08" clipDistance="75" nodeId="116" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart9" translation="-0.320752 0.1 0.08" clipDistance="75" nodeId="117" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="11" name="numberPart10" translation="-0.410752 0.1 0.08" clipDistance="75" nodeId="118" materialIds="15" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="12" name="Gehaeuse" scale="0.7 1 1" nodeId="119" materialIds="9" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="13" name="Halterung" translation="0 0.0914671 0.0295773" rotation="0 -5.78539e-27 -1.15013e-06" scale="0.7 1 1" nodeId="120" materialIds="9" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape shapeId="14" name="PlayerTrigger" translation="-1.54995 0.0258135 0.00977784" rotation="-0 90 0" scale="2.3 2 2" static="true" trigger="true" collisionMask="34603008" nodeId="121" materialIds="10" nonRenderable="true"/>
+      <TransformGroup name="VisObjekts" translation="0 -0.1 0" nodeId="122">
+        <TransformGroup name="Bienenhaus" nodeId="123">
+          <Shape shapeId="15" name="Bienenhaus" static="true" nodeId="124" materialIds="30" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="16" name="Tuer" translation="-1.43 2.22936 1.892" rotation="0 85.566 0" static="true" nodeId="125" materialIds="30" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="17" name="Griff" translation="1.43 -2.229 -1.892" static="true" nodeId="126" materialIds="30" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="18" name="Fenster" translation="0.00903804 -0.65832 -0.473" scale="1 0.3 0.3" clipDistance="150" nodeId="127" materialIds="28" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+            <TransformGroup name="Fenster" nodeId="128">
+              <Shape shapeId="18" name="Fenster" translation="0.513759 1.87518 0.774418" scale="1 0.4 1.9" clipDistance="150" nodeId="129" materialIds="28" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="18" name="Fenster" translation="-0.472167 1.89741 1.96262" rotation="0 90 0" scale="1 0.4 0.6" clipDistance="150" nodeId="130" materialIds="28" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="18" name="Fenster" translation="-0.472167 1.89741 -1.97419" rotation="0 90 0" scale="1 0.4 0.6" clipDistance="150" nodeId="131" materialIds="28" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <Shape shapeId="6" name="Zarge" translation="-0.278775 0.267266 -0.25007" rotation="180 0.0036467 -180" dynamic="true" nodeId="132" materialIds="20" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="19" name="Raehmchen" translation="0 0.0148496 -0.129157" nodeId="133" materialIds="20" castsShadows="true" receiveShadows="true">
+                <TransformGroup name="transform" translation="-0.00612246 0 0" nodeId="134">
+                  <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" visibility="false" nodeId="135" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" visibility="false" nodeId="136" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" visibility="false" nodeId="137" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="138" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="139" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </Shape>
+              <Shape shapeId="19" name="Raehmchen" translation="0 0.0148496 -0.0279511" nodeId="140" materialIds="20" castsShadows="true" receiveShadows="true">
+                <TransformGroup name="transform" translation="-0.00612246 0 0" nodeId="141">
+                  <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" nodeId="142" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="143" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="144" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="145" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="146" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </Shape>
+              <Shape shapeId="19" name="Raehmchen" translation="0 0.0148496 0.0675738" nodeId="147" materialIds="20" castsShadows="true" receiveShadows="true">
+                <TransformGroup name="transform" translation="-0.00612246 0 0" nodeId="148">
+                  <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" visibility="false" nodeId="149" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="150" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="151" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="152" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="153" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </Shape>
+              <Shape shapeId="19" name="Raehmchen" translation="0 0.0148496 0.145769" nodeId="154" materialIds="20" castsShadows="true" receiveShadows="true">
+                <TransformGroup name="transform" translation="-0.00612246 0 0" nodeId="155">
+                  <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" visibility="false" nodeId="156" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" visibility="false" nodeId="157" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="158" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="159" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                  <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="160" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                </TransformGroup>
+              </Shape>
+            </Shape>
+          </Shape>
+        </TransformGroup>
+        <Shape shapeId="25" name="Fass" translation="-0.925 0.15 -1.5" rotation="0 -76.359 0" static="true" nodeId="161" materialIds="7" castsShadows="true" receiveShadows="true"/>
+        <TransformGroup name="lights" nodeId="162">
+          <TransformGroup name="day_night" visibility="false" nodeId="163">
+            <Shape shapeId="26" name="neonlicht" translation="-0.494 2.59332 0.577" rotation="0 90 0" scale="0.5 0.5 0.5" nodeId="164" materialIds="19" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Light name="pointLight29" translation="-0.777503 -1.323 0" clipDistance="120" nodeId="165" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+            </Shape>
+            <Shape shapeId="26" name="neonlicht" translation="-0.494 2.59235 -1.366" scale="0.5 0.5 0.5" nodeId="166" materialIds="19" castsShadows="true" receiveShadows="true" nonRenderable="true">
+              <Light name="pointLight29" translation="0 -1.323 0" clipDistance="120" nodeId="167" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="5"/>
+            </Shape>
+            <TransformGroup name="display" translation="4.85284 -1.30498 2.3239" nodeId="168">
+              <Light name="pointLight29" translation="-6.54772 2.986 -2.924" rotation="0 270 0" clipDistance="120" nodeId="169" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.024" rotation="0 270 0" clipDistance="120" nodeId="170" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.124" rotation="0 270 0" clipDistance="120" nodeId="171" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.224" rotation="0 270 0" clipDistance="120" nodeId="172" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.324" rotation="0 270 0" clipDistance="120" nodeId="173" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.424" rotation="0 270 0" clipDistance="120" nodeId="174" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.524" rotation="0 270 0" clipDistance="120" nodeId="175" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.624" rotation="0 270 0" clipDistance="120" nodeId="176" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+              <Light name="pointLight29" translation="-6.54772 2.98616 -3.724" rotation="0 270 0" clipDistance="120" nodeId="177" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" decayRate="1" range="0.2"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape shapeId="27" name="lampe" translation="-0.509079 2.64269 0.577836" rotation="0 0 180" static="true" nodeId="178" materialIds="25" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="28" name="glas" static="true" nodeId="179" materialIds="28" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="29" name="roehre" static="true" nodeId="180" materialIds="25" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="27" name="lampe" translation="-0.509079 2.64269 -1.35902" rotation="0 90 180" static="true" nodeId="181" materialIds="25" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="28" name="glas" static="true" nodeId="182" materialIds="28" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="29" name="roehre" static="true" nodeId="183" materialIds="25" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </TransformGroup>
+        <Shape shapeId="30" name="pail02_vis" translation="-1.01845 0.146798 -1.17801" scale="0.4 0.4 0.4" clipDistance="77" nodeId="184" materialIds="26" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="honig" translation="0 -0.0110204 0" rotation="6.39987e-07 77.7567 6.25283e-07" nodeId="185">
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 90 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="186" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 30 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="187" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 -30 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="188" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 -90 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="189" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 -150 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="190" materialIds="13" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="31" name="shader" translation="0 0.310879 0" rotation="0 -210 0" scale="0.2 1e-06 0.08" clipDistance="100" nodeId="191" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="cleaning" translation="-0.993861 0.398984 -1.23959" nodeId="192">
+          <TransformGroup name="shader" nodeId="193">
+            <Shape shapeId="31" name="shader" translation="-0.00773386 0.0249764 -0.045" rotation="51.4142 3.78221 -7.7535" scale="0.08 0.2 0.09" clipDistance="100" nodeId="194" materialIds="13" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="Beschilderung" nodeId="195">
+          <Shape shapeId="32" name="sign" translation="0.517221 0.9 1.68317" rotation="0 270 0" scale="0.3 0.3 0.3" nodeId="196" materialIds="24" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="33" name="bee" translation="-2.16829e-09 4.33657e-09 0.0496048" rotation="90 -5.00894e-06 -90" scale="0.5 1 0.5" nodeId="197" materialIds="18" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="32" name="sign" translation="-1.41907 1.44571 -0.994888" rotation="0 270 0" scale="0.5 0.5 0.5" nodeId="198" materialIds="24" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="34" name="honey" translation="-3.08227e-10 7.14793e-17 0.0474832" rotation="90 -6.10666e-13 270" scale="0.3 1 0.3" nodeId="199" materialIds="18" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="35" name="truck" translation="0.506 0.9 1.456" rotation="180 0 -90" scale="0.2 1 0.2" nodeId="200" materialIds="18" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="WorkAnimation" translation="0 -0.1 0" nodeId="201">
+        <TransformGroup name="PS" nodeId="202">
+          <TransformGroup name="Bienen" translation="-1.17509 0.611788 0.59656" rotation="0 180 0" nodeId="203"/>
+        </TransformGroup>
+        <TransformGroup name="Animations" translation="-0.925 0.15 -1.5" rotation="0 -76.359 0" nodeId="204">
+          <Shape shapeId="36" name="Kurbel" translation="-0.021 0.875 -0.257" nodeId="205" materialIds="7" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="37" name="Schleuder" translation="-0.020977 0.679318 0.003394" nodeId="206" materialIds="7" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="19" name="Raehmchen" translation="6.78874e-09 -0.155308 0.144998" rotation="0 0 90" nodeId="207" materialIds="20" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="transform" translation="-0.00612246 0 0" nodeId="208">
+                <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" nodeId="209" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="210" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="211" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="212" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="213" materialIds="22" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="19" name="Raehmchen" translation="6.4514e-09 -0.155308 -0.140242" rotation="180 0 90" nodeId="214" materialIds="20" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="transform" translation="0.00484127 0 -0.000919072" nodeId="215">
+                <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" nodeId="216" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="217" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="218" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="219" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="220" materialIds="22" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="19" name="Raehmchen" translation="-0.140738 -0.155308 -0.000101285" rotation="270 0 90" nodeId="221" materialIds="20" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="transform" translation="0 0 -0.00034818" nodeId="222">
+                <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" nodeId="223" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="224" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="225" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="226" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="227" materialIds="22" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+            <Shape shapeId="19" name="Raehmchen" translation="0.139067 -0.155308 -0.000101297" rotation="90 0 90" nodeId="228" materialIds="20" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="transform" translation="0.0108196 0 -0.000777959" nodeId="229">
+                <Shape shapeId="20" name="Honig5" scale="1 1 4.49959" nodeId="230" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="21" name="Honig4" scale="1 1 2.59581" nodeId="231" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="22" name="Honig3" scale="1 1 1.74898" nodeId="232" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="23" name="Honig2" scale="0.5 1 1.2826" nodeId="233" materialIds="22" castsShadows="true" receiveShadows="true"/>
+                <Shape shapeId="24" name="Honig1" translation="0 0 0.00278546" scale="0.5 1 0.947913" nodeId="234" materialIds="22" castsShadows="true" receiveShadows="true"/>
+              </TransformGroup>
+            </Shape>
+          </Shape>
+          <Shape shapeId="38" name="Verschluss" translation="0.209726 0.243348 0.163119" rotation="79.0628 -25.0558 31.6038" nodeId="235" materialIds="7" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="39" name="Deckel_open" translation="0.010649 0.804879 -0.03" rotation="1.53679e-05 -2.05973e-05 94.8978" nodeId="236" materialIds="28" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="40" name="Deckel_static" nodeId="237" materialIds="28" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="Sound" nodeId="238">
+          <AudioSource name="audio" translation="0.083 0 0.79499" rotation="0 90 0" nodeId="239" fileId="38" range="20" innerRange="10" volume="1" loops="0"/>
+        </TransformGroup>
+        <TransformGroup name="Shader" rotation="0 90 0" nodeId="241">
+          <TransformGroup name="light1" translation="1.41434 1.71704 -1.60772" rotation="7.635 180 0" scale="0.98 0.98 0.98" nodeId="242">
+            <Shape shapeId="41" name="backLights_corona_main" scale="0.1 0.1 0.1" nodeId="243" materialIds="23" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <TransformGroup name="light2" translation="1.41446 1.6519 -1.59938" rotation="7.635 180 0" nodeId="244">
+            <Shape shapeId="41" name="backLights_corona_main" translation="0 0.002 -0.000751971" scale="0.1 0.1 0.1" nodeId="245" materialIds="17" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="clearAreas" translation="0 -0.1 0" nodeId="246">
+        <TransformGroup name="startIndex" translation="-4 1.90735e-06 3" nodeId="247"/>
+        <TransformGroup name="widthIndex" translation="-4 0 -3" nodeId="248"/>
+        <TransformGroup name="heightIndex" translation="1.5 0 3" nodeId="249"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+
+  <Animation externalAnimFile="honeybeeShed.i3d.anim" />
+  <UserAttributes>
+    <UserAttribute nodeId="73">
+      <Attribute name="Area" type="string" value="5"/>
+      <Attribute name="PlayerIndex" type="string" value="2"/>
+      <Attribute name="ProduktPerHour" type="float" value="20"/>
+      <Attribute name="WorkAniIndex" type="string" value="4"/>
+      <Attribute name="inputIndex" type="string" value="0"/>
+      <Attribute name="onCreate" type="scriptCallback" value="modOnCreate.FabrikScript"/>
+      <Attribute name="outputIndex" type="string" value="1"/>
+      <Attribute name="saveId" type="string" value="slow_bee"/>
+    </UserAttribute>
+    <UserAttribute nodeId="75">
+      <Attribute name="capacity" type="integer" value="160"/>
+      <Attribute name="factor" type="float" value="0.02"/>
+      <Attribute name="fillTypes" type="string" value="bee"/>
+      <Attribute name="name" type="string" value="slow_bee_bee"/>
+    </UserAttribute>
+    <UserAttribute nodeId="103">
+      <Attribute name="capacity" type="integer" value="500"/>
+      <Attribute name="factor" type="float" value="1"/>
+      <Attribute name="fillType" type="string" value="honey"/>
+      <Attribute name="name" type="string" value="slow_bee_honey"/>
+    </UserAttribute>
+    <UserAttribute nodeId="104">
+      <Attribute name="Dev" type="boolean" value="true"/>
+      <Attribute name="palletFilename" type="string" value="Paletten/honigpalette.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="201">
+      <Attribute name="AnimationIndex" type="string" value="1"/>
+      <Attribute name="PartikleIndex" type="string" value="0"/>
+      <Attribute name="ShaderIndex" type="string" value="3"/>
+      <Attribute name="SoundIndex" type="string" value="2"/>
+    </UserAttribute>
+    <UserAttribute nodeId="203">
+      <Attribute name="particleSystemFilename" type="string" value="particleSystems/bienen.i3d"/>
+    </UserAttribute>
+    <UserAttribute nodeId="205">
+      <Attribute name="ClipName" type="string" value="slow_bee"/>
+    </UserAttribute>
+    <UserAttribute nodeId="242">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="243">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 1 0 0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="244">
+      <Attribute name="ShaderObjektIndex" type="string" value="0"/>
+    </UserAttribute>
+    <UserAttribute nodeId="245">
+      <Attribute name="parameterName" type="string" value="rotationSpeed"/>
+      <Attribute name="shared" type="boolean" value="true"/>
+      <Attribute name="value" type="string" value="0 0 0 0"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
