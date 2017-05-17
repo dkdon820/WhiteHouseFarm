@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="Batiment_Acier_Ancien" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="Ao_Bardage.dds" relativePath="true"/>
+    <File fileId="4" filename="Ao_Charpente.dds" relativePath="true"/>
+    <File fileId="1" filename="Ao_Sol.dds" relativePath="true"/>
+    <File fileId="3" filename="Ao_Toit.dds" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Ao_Toit" materialId="7" ambientColor="1 1 1" cosPower="9.60784" specularColor="0.25 0.25 0.25">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="Ao_Charpente" materialId="8" ambientColor="1 1 1" cosPower="9.60784" specularColor="0.25 0.25 0.25">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="Ao_Sol" materialId="9" ambientColor="1 1 1" cosPower="9.60784" specularColor="0.25 0.25 0.25">
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="Ao_Bardage" materialId="11" ambientColor="1 1 1" cosPower="9.60784" specularColor="0.25 0.25 0.25">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="baleOpenSided.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="transform" nodeId="24">
+      <Shape shapeId="1" name="polySurface33" rotation="9.33467e-06 -0 0" static="true" nodeId="21" materialIds="9" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="2" name="polySurface27" rotation="9.33467e-06 -0 0" static="true" nodeId="18" materialIds="11" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="polySurface32" rotation="9.33467e-06 -0 0" static="true" nodeId="19" materialIds="7" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="4" name="polySurface31" rotation="9.33467e-06 -0 0" static="true" nodeId="20" materialIds="8" castsShadows="true" receiveShadows="true"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

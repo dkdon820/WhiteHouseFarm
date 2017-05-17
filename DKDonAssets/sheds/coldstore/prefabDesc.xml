@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<prefabDesc descVersion="1">
+    <author>fqC Art.</author>
+    <version>1.0.0.0</version>
+	<title>
+        <en>GDR Grain Store with lighting</en>
+		<de>DDR Getreidelager mit Beleuchtung</de>
+		<fr>GDR Grain Store with lighting</fr>
+    </title>
+	<description>
+        <en>GDR grain store with lighting</en>
+		<de>DDR Getreidelager mit Beleuchtung</de>
+		<fr>GDR grain store with lighting</fr>
+    </description>
+	<categories>
+        <category>Building</category>
+        <category>Static</category>
+    </categories>
+	<prefabs>
+		<prefab name="GDRGrainStore" i3dFilename="GDR_GrainStore.i3d" />
+    </prefabs>
+</prefabDesc>
